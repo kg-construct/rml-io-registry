@@ -1,6 +1,6 @@
-# JSON Data values
+# Natural Datatype Mapping
 
-> Based onhttps://www.w3.org/TR/json-ld11/#conversion-of-native-data-types
+> Based on https://www.w3.org/TR/json-ld11/#conversion-of-native-data-types
 
 Let _dv_ be the JSON data value.
 Let _dt_ be the JSON data value type.
