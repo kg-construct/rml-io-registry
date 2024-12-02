@@ -15,7 +15,7 @@ The [=nodelist=] that is the result of evaluating the <a data-cite="RML-Core#dfn
 
 ### Default iterator
 
-The <a data-cite="RML-CORE#dfn-default-iterator">default iterator</a>, if no <a data-cite="RML-Core#dfn-iterator">iterator</a> is specified for a <a data-cite="RML-Core#dfn-logical-source">logical source</a> with the [=JSONPath reference formulation=], MUST be the [=root node identifier=] `$`. This expression refers to the root node of the [=JSON value=].
+The <a data-cite="RML-Core#dfn-default-iterator">default iterator</a>, if no <a data-cite="RML-Core#dfn-iterator">iterator</a> is specified for a <a data-cite="RML-Core#dfn-logical-source">logical source</a> with the [=JSONPath reference formulation=], MUST be the [=root node identifier=] `$`. This expression refers to the root node of the [=JSON value=].
 
 ## Expressions
 
