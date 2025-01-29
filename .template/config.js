@@ -25,49 +25,21 @@ var respecConfig = {
   preProcess: [loadTurtle],
   authors: [
     {
-      name: "Ben De Meester",
-      company: "Ghent University &ndash; imec &ndash; IDLab",
-      url: "https://ben.de-meester.org/#me",
-      orcid: "0000-0003-0248-0987",
-      companyURL: "https://knows.idlab.ugent.be/"
-    },
-    {
-      name: "Pano Maria",
-      company: "Skemu",
-      url: "https://skemu.com",
-      orcid: "0009-0000-2598-1894",
-      companyURL: "https://skemu.com"
-    },
-    {
-      name: "Dylan Van Assche",
-      company: "Ghent University &ndash; imec &ndash; IDLab",
-      url: "https://dylanvanassche.be",
-      orcid: "0000-0002-7195-9935",
-      companyURL: "https://knows.idlab.ugent.be/"
+      name: "John Doe",
+      company: "The Company",
+      url: "https://example.org",
+      orcid: "0000-0000-0000-0000",
+      companyURL: "https://example.org/company"
     },
   ],
-  edDraftURI: "https://w3id.org/rml/io-registry/json-path/spec",
+  edDraftURI: "https://w3id.org/rml/io-registry/TEMPLATE/spec",
   editors: [
     {
-      name: "Ben De Meester",
-      company: "Ghent University &ndash; imec &ndash; IDLab",
-      url: "https://ben.de-meester.org/#me",
-      orcid: "0000-0003-0248-0987",
-      companyURL: "https://knows.idlab.ugent.be/"
-    },
-    {
-      name: "Pano Maria",
-      company: "Skemu",
-      url: "https://skemu.com",
-      orcid: "0009-0000-2598-1894",
-      companyURL: "https://skemu.com"
-    },
-    {
-      name: "Dylan Van Assche",
-      company: "Ghent University &ndash; imec &ndash; IDLab",
-      url: "https://dylanvanassche.be",
-      orcid: "0000-0002-7195-9935",
-      companyURL: "https://knows.idlab.ugent.be/"
+      name: "John Doe",
+      company: "The Company",
+      url: "https://example.org",
+      orcid: "0000-0000-0000-0000",
+      companyURL: "https://example.org/company"
     },
   ],
   formerEditors: [
@@ -91,7 +63,7 @@ var respecConfig = {
     },
   },
   otherLinks: [],
-  shortName: "RML-Ref-JSON-Path",
+  shortName: "RML-Ref-TEMPLATE",
   specStatus: "CG-DRAFT",
   // W3C config
   copyrightStart: "2024",
