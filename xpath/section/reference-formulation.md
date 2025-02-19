@@ -8,7 +8,7 @@ The default XPath Reference Formulation is a <a data-cite="RML-Core#dfn-referenc
 
 ## Iterator
 
-The <a data-cite="RML-Core#dfn-iterator">iterator</a> for a <a data-cite="RML-Core#dfn-logical-source">logical source</a> with the [=XPath reference formulation=] SHOULD be expressed using XPath in accordance with [[XPath]].
+The <a data-cite="RML-Core#dfn-iterator">iterator</a> for a <a data-cite="RML-Core#dfn-logical-source">logical source</a> with the [=XPath reference formulation=] SHOULD be expressed using XPath in accordance with [[XPATH-31]].
 The result of evaluating the <a data-cite="RML-Core#dfn-iterator">iterator</a> against the [=XML value=] that is the <a data-cite="RML-Core#dfn-data-source">data source</a> is a [=nodelist=] (i.e., a list of zero or more [=nodes=] of the [=value=]).
 
 The [=nodelist=] that is the result of evaluating the <a data-cite="RML-Core#dfn-iterator">iterator</a> MUST be used to generate the <a data-cite="RML-Core#dfn-logical-iteration">logical iterations</a> for the <a data-cite="RML-Core#dfn-logical-source">logical source</a>. Each node in the [=nodelist=] becomes a new [=XML value=] which MUST be used as the context for the evaluation of the <a data-cite="RML-Core#dfn-expression">expression</a> associated with the <a data-cite="RML-Core#dfn-logical-source">logical source</a>. The order of the [=nodelist=] MUST be preserved in the logical iterations.
