@@ -19,7 +19,7 @@ The <a data-cite="RML-Core#dfn-default-iterator">default iterator</a>, if no <a 
 
 ## Expressions
 
-An <a data-cite="RML-Core#dfn-expression">expression</a> for <a data-cite="RML-Core#dfn-expression-map">expression maps</a> associated with a <a data-cite="RML-Core#dfn-logical-source">logical source</a> with the [=TEMPLATE reference formulation=] SHOULD be expressed using TEMPLATE in accordance with [[RFC9535]].
+An <a data-cite="RML-Core#dfn-expression">expression</a> for <a data-cite="RML-Core#dfn-expression-map">expression maps</a> associated with a <a data-cite="RML-Core#dfn-logical-source">logical source</a> with the [=TEMPLATE reference formulation=] SHOULD be expressed using TEMPLATE in accordance with [[TEMPLATE standard]].
 
 An <a data-cite="RML-Core#dfn-expression">expression</a> is evaluated against a <a data-cite="RML-Core#dfn-logical-iteration">logical iteration</a> which is a [=TEMPLATE value=].
 The result of evaluating the <a data-cite="RML-Core#dfn-expression">expression</a> is a [=nodelist=], which MUST be transformed to a list of [=TEMPLATE values=] that forms the <a data-cite="RML-Core#dfn-expression-evaluation-result">expression evaluation result</a>. The order of the [=nodelist=] MUST be preserved in the <a data-cite="RML-Core#dfn-expression-evaluation-result">expression evaluation result</a>.
