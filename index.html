@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>RML IO Registry</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This describes the requirements identified for the ontology">
+    <meta name="language" content="English">
+
+    <link rel="stylesheet" href="./vocab/themes/blue/style.css" type="text/css" media="print, projection, screen" />
+    <script src="../vocab/js/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="./vocab/js/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="./vocab/js/jquery.stickytableheaders.js"></script>
+    <script type="text/javascript" src="./vocab/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="./vocab/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./vocab/css/jquery-ui.css"></link>
+    <script type="text/javascript" id="js">
+	    $(document).ready(function()
+		    {
+		    	$("#tablesorter-demo").tablesorter();
+		    	$("#tablesorter-demo").stickyTableHeaders();
+		    	$('[data-toggle="tooltip"]').tooltip();
+		    }
+	    );
+    </script>
+
+    <!-- Le styles -->
+    <link href="vocab/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="vocab/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+  </head>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+       <ul class="nav navbar-nav">
+          <li><a href="http://w3id.org/rml/portal/">Ontologies</a></li>
+       </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+ </div>
+<div class="container">
+
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1>RML IO Registry</h1>
+        <p class="lead">Here you can find the list of reference formulations and access descriptions of the mapping language RML.</p>
+      </div>
+      <hr>
+<div class="row">
+</div>
+<br>
+<table id="tablesorter-demo" class="tablesorter table table-hover table-responsive">
+<thead>
+<tr>
+<th class="col-md-2">Reference Formulation</th>
+<th class="col-md-1">Serialization</th>
+<th class="col-md-1">License</th>
+<th class="col-md-1">Language</th>
+<th class="col-md-2">Links</th>
+<th class="col-md-2">Required by</th>
+<th class="col-md-4">Description</th>
+</tr>
+</thead>
+<tbody>
+  <tr id="tr1">
+  <td><a href = "http://w3id.org/rml/io-registry/jsonpath/spec" target="_blank">JSONPath</a></td>
+  <td>
+  <span class="label label-primary">html</span>
+  </td>
+  <td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+  <td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+  <!--<td><span class="label label-primary">devops</span></td>-->
+  <td>
+    <img src="vocab/images/w3c.png"  width=15% alt="spec"/><span style="padding-left:9px"><a href="http://w3id.org/rml/io-registry/jsonpath/spec">Specification</a></span><br>
+    <img src="vocab/images/test-cases.svg"  width=13% alt="spec"/><span style="padding-left:12px"><a href="http://w3id.org/rml/io-registry/jsonpath/test-cases">Test cases</a></span>
+  </td>
+
+  </td>
+  <td><a href="http://w3id.org/rml/core/spec">RML-Core</a></td>
+  <td>
+  JSONPath reference formulation for referencing JSON data.</td>
+  <input type="hidden" name="inp1" id="inp1" value="JSONPath reference formulation"/></tr>
+
+  <tr id="tr2">
+  <td><a href = "http://w3id.org/rml/io-registry/xpath/spec" target="_blank">XPath</a></td>
+  <td>
+  <span class="label label-primary">html</span>
+  </td>
+  <td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+  <td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+  <!--<td><span class="label label-primary">devops</span></td>-->
+  <td>
+    <img src="vocab/images/w3c.png"  width=15% alt="spec"/><span style="padding-left:9px"><a href="http://w3id.org/rml/io-registry/xpath/spec">Specification</a></span><br>
+    <img src="vocab/images/test-cases.svg"  width=13% alt="spec"/><span style="padding-left:12px"><a href="http://w3id.org/rml/io-registry/xpath/test-cases">Test cases</a></span>
+  </td>
+
+  </td>
+  <td><a href="http://w3id.org/rml/io/spec">RML-IO</a></td>
+  <td>
+  XPath reference formulation for referencing XML data.</td>
+  <input type="hidden" name="inp2" id="inp2" value="XPath reference formulation"/></tr>
+
+  <tr id="tr3">
+  <td><a href = "http://w3id.org/rml/io-registry/csv/spec" target="_blank">CSV</a></td>
+  <td>
+  <span class="label label-primary">html</span>
+  </td>
+  <td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+  <td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+  <!--<td><span class="label label-primary">devops</span></td>-->
+  <td>
+    <img src="vocab/images/w3c.png"  width=15% alt="spec"/><span style="padding-left:9px"><a href="http://w3id.org/rml/io-registry/csv/spec">Specification</a></span><br>
+    <img src="vocab/images/test-cases.svg"  width=13% alt="spec"/><span style="padding-left:12px"><a href="http://w3id.org/rml/io-registry/csv/test-cases">Test cases</a></span>
+  </td>
+
+  </td>
+  <td><a href="http://w3id.org/rml/io/spec">RML-IO</a></td>
+  <td>
+  CSV reference formulation for referencing CSV data.</td>
+  <input type="hidden" name="inp3" id="inp3" value="CSV reference formulation"/></tr>
+
+  <tr id="tr4">
+  <td><a href = "http://w3id.org/rml/io-registry/csvw/spec" target="_blank">CSV on the Web (CSVW)</a></td>
+  <td>
+  <span class="label label-primary">html</span>
+  </td>
+  <td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+  <td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+  <!--<td><span class="label label-primary">devops</span></td>-->
+  <td>
+    <img src="vocab/images/w3c.png"  width=15% alt="spec"/><span style="padding-left:9px"><a href="http://w3id.org/rml/io-registry/csvw/spec">Specification</a></span><br>
+    <img src="vocab/images/test-cases.svg"  width=13% alt="spec"/><span style="padding-left:12px"><a href="http://w3id.org/rml/io-registry/csvw/test-cases">Test cases</a></span>
+  </td>
+
+  </td>
+  <td><a href="http://w3id.org/rml/io/spec">RML-IO</a></td>
+  <td>
+  CSV on the Web (CSVW) reference formulation for referencing CSV data.</td>
+  <input type="hidden" name="inp4" id="inp4" value="CSVW reference formulation"/></tr>
+
+  <tr id="tr5">
+  <td><a href = "http://w3id.org/rml/io-registry/sql/spec" target="_blank">SQL</a></td>
+  <td>
+  <span class="label label-primary">html</span>
+  </td>
+  <td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+  <td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+  <!--<td><span class="label label-primary">devops</span></td>-->
+  <td>
+    <img src="vocab/images/w3c.png"  width=15% alt="spec"/><span style="padding-left:9px"><a href="http://w3id.org/rml/io-registry/sql/spec">Specification</a></span><br>
+    <img src="vocab/images/test-cases.svg"  width=13% alt="spec"/><span style="padding-left:12px"><a href="http://w3id.org/rml/io-registry/sql/test-cases">Test cases</a></span>
+  </td>
+
+  </td>
+  <td><a href="http://w3id.org/rml/io/spec">RML-IO</a></td>
+  <td>
+  SQL reference formulation for referencing SQL data.</td>
+  <input type="hidden" name="inp5" id="inp5" value="SQL reference formulation"/></tr>
+	
+</tbody></table>
+
+<table id="tablesorter-demo" class="tablesorter table table-hover table-responsive">
+<thead>
+<tr>
+<th class="col-md-2">Access description</th>
+<th class="col-md-1">Serialization</th>
+<th class="col-md-1">License</th>
+<th class="col-md-1">Language</th>
+<th class="col-md-2">Links</th>
+<th class="col-md-2">Required by</th>
+<th class="col-md-4">Description</th>
+</tr>
+</thead>
+<tbody>
+  <tr id="tr6">
+  <td><a href = "http://w3id.org/rml/io-registry/d2rq/spec" target="_blank">D2RQ</a></td>
+  <td>
+  <span class="label label-primary">html</span>
+  </td>
+  <td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+  <td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+  <!--<td><span class="label label-primary">devops</span></td>-->
+  <td>
+    <img src="vocab/images/w3c.png"  width=15% alt="spec"/><span style="padding-left:9px"><a href="http://w3id.org/rml/io-registry/d2rq/spec">Specification</a></span><br>
+    <img src="vocab/images/test-cases.svg"  width=13% alt="spec"/><span style="padding-left:12px"><a href="http://w3id.org/rml/io-registry/d2rq/test-cases">Test cases</a></span>
+  </td>
+
+  </td>
+  <td><a href="http://w3id.org/rml/io/spec">RML-IO</a></td>
+  <td>
+  D2RQ access description for accessing SQL databases.</td>
+  <input type="hidden" name="inp6" id="inp6" value="D2RQ access description"/></tr>
+
+  <tr id="tr7">
+  <td><a href = "http://w3id.org/rml/io-registry/filepath/spec" target="_blank">FilePath</a></td>
+  <td>
+  <span class="label label-primary">html</span>
+  </td>
+  <td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+  <td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+  <!--<td><span class="label label-primary">devops</span></td>-->
+  <td>
+    <img src="vocab/images/w3c.png"  width=15% alt="spec"/><span style="padding-left:9px"><a href="http://w3id.org/rml/io-registry/filepath/spec">Specification</a></span><br>
+    <img src="vocab/images/test-cases.svg"  width=13% alt="spec"/><span style="padding-left:12px"><a href="http://w3id.org/rml/io-registry/filepath/test-cases">Test cases</a></span>
+  </td>
+
+  </td>
+  <td><a href="http://w3id.org/rml/core/spec">RML-Core</a></td>
+  <td>
+  RML FilePath access description to access local and relative files.</td>
+  <input type="hidden" name="inp7" id="inp7" value="RML File Path access description"/></tr>
+
+  <tr id="tr8">
+  <td><a href = "http://w3id.org/rml/io-registry/wot/spec" target="_blank">W3C Web of Things (WOT)</a></td>
+  <td>
+  <span class="label label-primary">html</span>
+  </td>
+  <td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+  <td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+  <!--<td><span class="label label-primary">devops</span></td>-->
+  <td>
+    <img src="vocab/images/w3c.png"  width=15% alt="spec"/><span style="padding-left:9px"><a href="http://w3id.org/rml/io-registry/wot/spec">Specification</a></span><br>
+    <img src="vocab/images/test-cases.svg"  width=13% alt="spec"/><span style="padding-left:12px"><a href="http://w3id.org/rml/io-registry/wot/test-cases">Test cases</a></span>
+  </td>
+
+  </td>
+  <td>RML-IO-Registry Community</td>
+  <td>
+  W3C Web of Things access description for Web APIs and data streams.</td>
+  <input type="hidden" name="inp8" id="inp8" value="WoT access description"/></tr>
+
+  <tr id="tr9">
+  <td><a href = "http://w3id.org/rml/io-registry/dcat/spec" target="_blank">W3C Data Catalog (DCAT)</a></td>
+  <td>
+  <span class="label label-primary">html</span>
+  </td>
+  <td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+  <td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+  <!--<td><span class="label label-primary">devops</span></td>-->
+  <td>
+    <img src="vocab/images/w3c.png"  width=15% alt="spec"/><span style="padding-left:9px"><a href="http://w3id.org/rml/io-registry/dcat/spec">Specification</a></span><br>
+    <img src="vocab/images/test-cases.svg"  width=13% alt="spec"/><span style="padding-left:12px"><a href="http://w3id.org/rml/io-registry/dcat/test-cases">Test cases</a></span>
+  </td>
+
+  </td>
+  <td>RML-IO-Registry Community</td>
+  <td>
+  W3C Data Catalog access description for datasets locally and remote.</td>
+  <input type="hidden" name="inp9" id="inp9" value="DCAT access description"/></tr>
+
+</tbody></table>
+
+<hr>
+
+<footer class="footer">
+  <div class="row">
+    <div class="col-md-10">
+      Developed by <a href="https://www.w3.org/community/kg-construct/" target="_blank">W3C Community Group on Knowledge Graph Construction</a>
+      <br>
+      Page created with  <a href = "https://github.com/dgarijo/vocabLite" target="_blank">VocabLite</a>
+      <br>
+      Built with <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a>
+      Icons from <a target="_blank" href="http://glyphicons.com/">Glyphicons</a>
+      <br>
+      Latest revision February, 2025
+      <br>
+      <p>&copy; W3C CG KGC</p>
+    </div>
+    <div class="col-md-2">
+      <a href="https://www.w3.org/community/kg-construct/" target="_blank"><img src="./vocab/images/cgbg-logo.svg.gif" alt="CG logo" class="img-rounded"
+                                                            class="img-responsive" width="70%" /></a>
+    </div>
+  </div>
+</footer>
+    </div> <!-- /container -->
