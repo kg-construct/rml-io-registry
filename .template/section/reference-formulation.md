@@ -15,7 +15,7 @@ The [=TEMPLATE iterable value=] that is the result of evaluating the <a data-cit
 
 ### Default iterator
 
-The <a data-cite="RML-Core#dfn-default-iterator">default iterator</a>, if no <a data-cite="RML-Core#dfn-iterator">iterator</a> is specified for a <a data-cite="RML-Core#dfn-logical-source">logical source</a> with the [=TEMPLATE reference formulation=], MUST be the [=root node identifier=] `$`. This expression refers to the root node of the [=TEMPLATE value=].
+The <a data-cite="RML-Core#dfn-default-iterator">default iterator</a>, if no <a data-cite="RML-Core#dfn-iterator">iterator</a> is specified for a <a data-cite="RML-Core#dfn-logical-source">logical source</a> with the [=TEMPLATE reference formulation=], MUST be  [=TEMPLATE default expression=].
 
 ## Expressions
 
