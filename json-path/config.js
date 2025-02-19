@@ -38,6 +38,13 @@ var respecConfig = {
       orcid: "0009-0000-2598-1894",
       companyURL: "https://skemu.com"
     },
+    {
+      name: "Dylan Van Assche",
+      company: "Ghent University &ndash; imec &ndash; IDLab",
+      url: "https://dylanvanassche.be",
+      orcid: "0000-0002-7195-9935",
+      companyURL: "https://knows.idlab.ugent.be/"
+    },
   ],
   edDraftURI: "https://w3id.org/rml/io-registry/json-path/spec",
   editors: [
@@ -54,6 +61,13 @@ var respecConfig = {
       url: "https://skemu.com",
       orcid: "0009-0000-2598-1894",
       companyURL: "https://skemu.com"
+    },
+    {
+      name: "Dylan Van Assche",
+      company: "Ghent University &ndash; imec &ndash; IDLab",
+      url: "https://dylanvanassche.be",
+      orcid: "0000-0002-7195-9935",
+      companyURL: "https://knows.idlab.ugent.be/"
     },
   ],
   formerEditors: [

@@ -46,7 +46,7 @@ var respecConfig = {
       companyURL: "https://knows.idlab.ugent.be/"
     },
   ],
-  edDraftURI: "https://w3id.org/rml/io-registry/json-path/spec",
+  edDraftURI: "https://w3id.org/rml/io-registry/xpath/spec",
   editors: [
     {
       name: "Ben De Meester",
@@ -91,7 +91,7 @@ var respecConfig = {
     },
   },
   otherLinks: [],
-  shortName: "RML-Ref-JSON-Path",
+  shortName: "RML-Ref-XPath",
   specStatus: "CG-DRAFT",
   // W3C config
   copyrightStart: "2024",
