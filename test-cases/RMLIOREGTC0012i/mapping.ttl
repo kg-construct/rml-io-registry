@@ -29,7 +29,7 @@
   ].
 
 <#CSVW_source> a csvw:Table;
-   csvw:url "student.csv" ;
+   csvw:url "Friends.csv" ;
    csvw:dialect [ a csvw:Dialect;
-       csvw:trim true;
+       csvw:quoteChar "'";
    ] .
