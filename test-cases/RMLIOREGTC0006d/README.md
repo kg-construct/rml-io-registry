@@ -1,27 +1,13 @@
-## RMLTC0013a-SQLServer
+## RMLIOREGTC0006d
 
-**Title**: "Generation of empty triples from referenced columns that have null values"
+**Title**: SQLServer table invalid
 
-**Description**: "Tests the generation of empty triples from referenced columns that have null values"
+**Description**: Handle invalid table for SQLServer
 
-**Error expected?** No
+**Error expected?** Yes
 
 **Input**
-```
-USE TestDB;
-DROP TABLE IF EXISTS Person;
-
-CREATE TABLE Person (
-ID integer,
-Name varchar(50),
-DateOfBirth varchar(50),
-PRIMARY KEY (ID)
-);
-INSERT INTO Person (ID, Name, DateOfBirth) VALUES (1,'Alice', NULL);
-INSERT INTO Person (ID, Name, DateOfBirth) VALUES (2,'Bob', 'September, 2010');
-
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006d/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006d/Friends.json)
 
 **Mapping**
 ```
@@ -50,14 +36,6 @@ INSERT INTO Person (ID, Name, DateOfBirth) VALUES (2,'Bob', 'September, 2010');
   d2rq:jdbcDriver "com.microsoft.sqlserver.jdbc.SQLServerDriver";
   d2rq:password "YourSTRONG!Passw0rd;";
   d2rq:username "sa" .
-
-```
-
-**Output**
-```
-<http://example.com/Person/2/Bob/September%2C%202010> <http://example.com/BirthDay> "September, 2010" .
-
-
 
 ```
 

@@ -1,34 +1,13 @@
-## RMLTC0012e-MySQL
+## RMLIOREGTC0004t
 
-**Title**: "Default mapping"
+**Title**: MySQL: Default mapping
 
-**Description**: "Tests the generation of a default mapping for tables without a primary key."
+**Description**: Tests the generation of a default mapping for tables without a primary key.
 
 **Error expected?** No
 
 **Input**
-```
-USE test;
-DROP TABLE IF EXISTS test.IOUs;
-DROP TABLE IF EXISTS test.Lives;
-
-CREATE TABLE IOUs (
-      fname VARCHAR(20),
-      lname VARCHAR(20),
-      amount FLOAT);
-INSERT INTO IOUs (fname, lname, amount) VALUES ('Bob', 'Smith', 30);
-INSERT INTO IOUs (fname, lname, amount) VALUES ('Sue', 'Jones', 20);
-INSERT INTO IOUs (fname, lname, amount) VALUES ('Bob', 'Smith', 30);
-
-CREATE TABLE Lives (
-      fname VARCHAR(20),
-      lname VARCHAR(20),
-      city VARCHAR(20));
-INSERT INTO Lives (fname, lname, city) VALUES ('Bob', 'Smith', 'London');
-INSERT INTO Lives (fname, lname, city) VALUES ('Sue', 'Jones', 'Madrid');
-INSERT INTO Lives (fname, lname, city) VALUES ('Bob', 'Smith', 'London');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004t/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004t/Friends.json)
 
 **Mapping**
 ```

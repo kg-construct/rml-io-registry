@@ -1,21 +1,13 @@
-## RMLTC0002j-PostgreSQL
+## RMLIOREGTC0005l
 
-**Title**: "Two columns mapping, qualified column names"
+**Title**: PostgreSQL: Two columns mapping, qualified column names
 
-**Description**: "Tests the presence of qualified column names in the SELECT list of the SQL query"
+**Description**: Tests the presence of qualified column names in the SELECT list of the SQL query
 
-**Error expected?** Yes
+**Error expected?** No
 
 **Input**
-```
-DROP TABLE IF EXISTS student CASCADE ;
-CREATE TABLE student (
-  "ID" INTEGER,
-  "Name" VARCHAR(50)
-);
-INSERT INTO student values ('10', 'Venus');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005l/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005l/Friends.json)
 
 **Mapping**
 ```
@@ -44,6 +36,12 @@ INSERT INTO student values ('10', 'Venus');
   d2rq:jdbcDriver "org.postgresql.Driver";
   d2rq:password "";
   d2rq:username "postgres" .
+
+```
+
+**Output**
+```
+<http://example.com/10/Venus> <http://example.com/id> "10";
 
 ```
 

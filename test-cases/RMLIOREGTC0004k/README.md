@@ -1,22 +1,13 @@
-## RMLTC0002i-MySQL
+## RMLIOREGTC0004k
 
-**Title**: "Two columns mapping, SQL Version identifier"
+**Title**: MySQL: Two columns mapping, SQL Version identifier
 
-**Description**: "Tests the presence of a SQL Version identifier "
+**Description**: Tests the presence of a SQL Version identifier 
 
-**Error expected?** Yes
+**Error expected?** No
 
 **Input**
-```
-USE test;
-DROP TABLE IF EXISTS test.student;
-CREATE TABLE student (
-  ID INTEGER,
-  Name VARCHAR(50)
-);
-INSERT INTO student values ('10', 'Venus');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004k/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004k/Friends.json)
 
 **Mapping**
 ```
@@ -45,6 +36,12 @@ INSERT INTO student values ('10', 'Venus');
   d2rq:jdbcDriver "com.mysql.cj.jdbc.Driver";
   d2rq:password "";
   d2rq:username "root" .
+
+```
+
+**Output**
+```
+<http://example.com/10/Venus> <http://example.com/id> "10";
 
 ```
 

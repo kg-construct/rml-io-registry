@@ -1,20 +1,13 @@
-## RMLTC0001a-JSON
+## RMLIOREGTC0002a
 
-**Title**: "One column mapping, subject URI generation by using rr:template"
+**Title**: Access JSON file and a JSON value
 
-**Description**: "Tests: (1) one column mapping; (2) subject URI generation by using rr:tmplate; (3) one column to one property"
+**Description**: Access JSON file in a RML Logical Source
 
 **Error expected?** No
 
 **Input**
-```
-{
-  "students": [{
-    "Name":"Venus"
-  }]
-}
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0002a/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0002a/Friends.json)
 
 **Mapping**
 ```

@@ -1,22 +1,13 @@
-## RMLTC0003b-PostgreSQL
+## RMLIOREGTC0005n
 
-**Title**: "Three columns mapping, concatenation of columns, by using a rr:sqlQuery to produce literal"
+**Title**: PostgreSQL: Three columns mapping, concatenation of columns, by using a rml:SQL2008Query to produce literal
 
-**Description**: "Tests: (1) three column mapping; and (2) concatenation of columns to produce literal, by using a rr:sqlQuery"
+**Description**: Tests: (1) three column mapping; and (2) concatenation of columns to produce literal, by using a rml:SQL2008Query
 
 **Error expected?** No
 
 **Input**
-```
-DROP TABLE IF EXISTS student CASCADE ;
-CREATE TABLE student (
-  id INTEGER,
-  firstname VARCHAR(50),
-  lastname VARCHAR(50)
-);
-INSERT INTO student values ('10', 'Venus', 'Williams');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005n/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005n/Friends.json)
 
 **Mapping**
 ```

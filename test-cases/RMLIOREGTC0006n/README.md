@@ -1,25 +1,13 @@
-## RMLTC0003b-SQLServer
+## RMLIOREGTC0006n
 
-**Title**: "Three columns mapping, concatenation of columns, by using a rr:sqlQuery to produce literal"
+**Title**: SQLServer: Three columns mapping, concatenation of columns, by using a rml:SQL2008Query to produce literal
 
-**Description**: "Tests: (1) three column mapping; and (2) concatenation of columns to produce literal, by using a rr:sqlQuery"
+**Description**: Tests: (1) three column mapping; and (2) concatenation of columns to produce literal, by using a rml:SQL2008Query
 
 **Error expected?** No
 
 **Input**
-```
-USE TestDB;
-EXEC sp_msforeachtable 'ALTER TABLE ? NOCHECK CONSTRAINT all'
-EXEC sp_msforeachtable 'DROP TABLE ?'
-
-CREATE TABLE student (
-  "ID" INTEGER,
-  "FirstName" VARCHAR(50),
-  "LastName" VARCHAR(50)
-);
-INSERT INTO student values ('10', 'Venus', 'Williams');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006n/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006n/Friends.json)
 
 **Mapping**
 ```

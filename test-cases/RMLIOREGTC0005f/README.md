@@ -1,21 +1,13 @@
-## RMLTC0002d-PostgreSQL
+## RMLIOREGTC0005f
 
-**Title**: "Two columns mapping, generation of a BlankNode subject by using a SQL Query that concatenates two columns"
+**Title**: PostgreSQL: Two columns mapping, generation of a BlankNode subject by using a SQL Query that concatenates two columns
 
-**Description**: "Tests (1) two column mapping, no primary key; (2) generation of a BlankNode subject by using a SQL Query that concatenates two columns; (3) one column to one property"
+**Description**: Tests (1) two column mapping, no primary key; (2) generation of a BlankNode subject by using a SQL Query that concatenates two columns; (3) one column to one property
 
 **Error expected?** No
 
 **Input**
-```
-DROP TABLE IF EXISTS student CASCADE ;
-CREATE TABLE student (
-  ID INTEGER,
-  Name VARCHAR(50)
-);
-INSERT INTO student values ('10', 'Venus');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005f/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005f/Friends.json)
 
 **Mapping**
 ```

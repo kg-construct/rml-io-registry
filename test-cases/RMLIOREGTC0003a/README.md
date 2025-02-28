@@ -1,22 +1,13 @@
-## RMLTC0001a-XML
+## RMLIOREGTC0003a
 
-**Title**: "One column mapping, subject URI generation by using rr:template"
+**Title**: Access XML file and XML value
 
-**Description**: "Tests: (1) one column mapping; (2) subject URI generation by using rr:tmplate; (3) one column to one property"
+**Description**: Access XML file in a RML Logical Source
 
 **Error expected?** No
 
 **Input**
-```
-<?xml version="1.0"?>
-
-<students>
-  <student>
-    <Name>Venus</Name>
-  </student>
-</students>
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0003a/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0003a/Friends.json)
 
 **Mapping**
 ```

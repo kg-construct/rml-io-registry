@@ -1,22 +1,13 @@
-## RMLTC0001a-XML
+## RMLIOREGTC0003c
 
-**Title**: "One column mapping, subject URI generation by using rr:template"
+**Title**: Invalid XPath expression
 
-**Description**: "Tests: (1) one column mapping; (2) subject URI generation by using rr:tmplate; (3) one column to one property"
+**Description**: Handle invalid XPath (unparseable)
 
-**Error expected?** No
+**Error expected?** Yes
 
 **Input**
-```
-<?xml version="1.0"?>
-
-<students>
-  <student>
-    <Name>Venus</Name>
-  </student>
-</students>
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0003c/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0003c/Friends.json)
 
 **Mapping**
 ```
@@ -25,7 +16,7 @@
 
 <http://example.com/base/TriplesMap1> a rml:TriplesMap;
   rml:logicalSource [ a rml:LogicalSource;
-      rml:iterator "/students/student";
+      rml:iterator "???dflidjsgfldfsnglds";
       rml:referenceFormulation rml:XPath;
       rml:source [ a rml:RelativePathSource;
           rml:root rml:MappingDirectory;
@@ -41,13 +32,6 @@
   rml:subjectMap [
       rml:template "http://example.com/{Name}"
     ] .
-
-```
-
-**Output**
-```
-<http://example.com/Venus> <http://xmlns.com/foaf/0.1/name> "Venus" .
-
 
 ```
 

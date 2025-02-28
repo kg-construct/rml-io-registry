@@ -1,23 +1,13 @@
-## RMLTC0002h-SQLServer
+## RMLIOREGTC0006j
 
-**Title**: "Two columns mapping, duplicate column name in SELECT"
+**Title**: SQLServer: Two columns mapping, duplicate column name in SELECT
 
-**Description**: "Tests the presence of duplicate column names in the SELECT list of the SQL query"
+**Description**: Tests the presence of duplicate column names in the SELECT list of the SQL query
 
 **Error expected?** Yes
 
 **Input**
-```
-USE TestDB;
-EXEC sp_msforeachtable 'ALTER TABLE ? NOCHECK CONSTRAINT all'
-EXEC sp_msforeachtable 'DROP TABLE ?'
-CREATE TABLE student (
-  "ID" INTEGER,
-  "Name" VARCHAR(50)
-);
-INSERT INTO student values ('10', 'Venus');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006j/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006j/Friends.json)
 
 **Mapping**
 ```

@@ -1,24 +1,13 @@
-## RMLTC0002e-SQLServer
+## RMLIOREGTC0006g
 
-**Title**: "Two columns mapping, an undefined rr:tableName"
+**Title**: SQLServer: Two columns mapping, an undefined rml:path
 
-**Description**: "Tests the presence of an undefined rr:tableName"
+**Description**: Tests the presence of an undefined rml:path
 
 **Error expected?** Yes
 
 **Input**
-```
-USE TestDB;
-EXEC sp_msforeachtable 'ALTER TABLE ? NOCHECK CONSTRAINT all'
-EXEC sp_msforeachtable 'DROP TABLE ?'
-
-CREATE TABLE student (
-  "ID" INTEGER,
-  "Name" VARCHAR(50)
-);
-INSERT INTO student values ('10', 'Venus');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006g/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006g/Friends.json)
 
 **Mapping**
 ```

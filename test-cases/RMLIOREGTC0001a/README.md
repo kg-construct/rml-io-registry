@@ -1,8 +1,8 @@
-## RMLTC0001a-CSV
+## RMLIOREGTC0001a
 
-**Title**: "One column mapping, subject URI generation by using rr:template"
+**Title**: Access CSV file and read column value
 
-**Description**: "Tests: (1) one column mapping; (2) subject URI generation by using rr:tmplate; (3) one column to one property"
+**Description**: Access CSV file in a RML Logical Source
 
 **Error expected?** No
 

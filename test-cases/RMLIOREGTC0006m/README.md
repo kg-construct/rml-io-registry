@@ -1,25 +1,13 @@
-## RMLTC0003a-SQLServer
+## RMLIOREGTC0006m
 
-**Title**: "Three columns mapping, undefined SQL Version identifier"
+**Title**: SQLServer: Three columns mapping, undefined SQL Version identifier
 
-**Description**: "Tests the presence of an undefined SQL Version identifier"
+**Description**: Tests the presence of an undefined SQL Version identifier
 
 **Error expected?** Yes
 
 **Input**
-```
-USE TestDB;
-EXEC sp_msforeachtable 'ALTER TABLE ? NOCHECK CONSTRAINT all'
-EXEC sp_msforeachtable 'DROP TABLE ?'
-
-CREATE TABLE student (
-  "ID" INTEGER,
-  "FirstName" VARCHAR(50),
-  "LastName" VARCHAR(50)
-);
-INSERT INTO student values ('10', 'Venus', 'Williams');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006m/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006m/Friends.json)
 
 **Mapping**
 ```

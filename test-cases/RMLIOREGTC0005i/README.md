@@ -1,21 +1,13 @@
-## RMLTC0002g-PostgreSQL
+## RMLIOREGTC0005i
 
-**Title**: "Two columns mapping, invalid SQL query"
+**Title**: PostgreSQL: Two columns mapping, invalid SQL query
 
-**Description**: "Tests the presence of an invalid SQL query"
+**Description**: Tests the presence of an invalid SQL query
 
 **Error expected?** Yes
 
 **Input**
-```
-DROP TABLE IF EXISTS student CASCADE ;
-CREATE TABLE student (
-  "ID" INTEGER,
-  "Name" VARCHAR(50)
-);
-INSERT INTO student values ('10', 'Venus');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005i/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005i/Friends.json)
 
 **Mapping**
 ```

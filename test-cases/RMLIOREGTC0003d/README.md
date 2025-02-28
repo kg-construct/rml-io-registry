@@ -1,22 +1,13 @@
-## RMLTC0001a-XML
+## RMLIOREGTC0003d
 
-**Title**: "One column mapping, subject URI generation by using rr:template"
+**Title**: XML Namespace
 
-**Description**: "Tests: (1) one column mapping; (2) subject URI generation by using rr:tmplate; (3) one column to one property"
+**Description**: Handle XML namespaces in expressions
 
 **Error expected?** No
 
 **Input**
-```
-<?xml version="1.0"?>
-
-<students>
-  <student>
-    <Name>Venus</Name>
-  </student>
-</students>
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0003d/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0003d/Friends.json)
 
 **Mapping**
 ```
@@ -25,8 +16,13 @@
 
 <http://example.com/base/TriplesMap1> a rml:TriplesMap;
   rml:logicalSource [ a rml:LogicalSource;
-      rml:iterator "/students/student";
-      rml:referenceFormulation rml:XPath;
+      rml:iterator "/ex:students/student";
+      rml:referenceFormulation [ a rml:XPathReferenceFormulation;
+        rml:namespace [ a rml:Namespace;
+         rml:namespacePrefix "ex";
+         rml:namespaceURL "http://example.org";
+       ];
+      ];
       rml:source [ a rml:RelativePathSource;
           rml:root rml:MappingDirectory;
           rml:path "student.xml"

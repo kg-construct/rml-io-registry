@@ -1,35 +1,40 @@
-## RMLTC0001a-JSON
+## RMLIOREGTC0009a
 
-**Title**: "One column mapping, subject URI generation by using rr:template"
+**Title**: Access a JSON over Kafka
 
-**Description**: "Tests: (1) one column mapping; (2) subject URI generation by using rr:tmplate; (3) one column to one property"
+**Description**: Access a Kafka stream with JSON data
 
 **Error expected?** No
 
 **Input**
-```
-{
-  "students": [{
-    "Name":"Venus"
-  }]
-}
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0009a/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0009a/Friends.json)
 
 **Mapping**
 ```
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rml: <http://w3id.org/rml/> .
+@prefix td: <https://www.w3.org/2019/wot/td#>;
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#>;
+@prefix kafka: <http://example.org/kafka/>;
+
+<#KafkaStream> a rml:LogicalSource;
+    rml:source [ a rml:Source, td:Thing;
+        td:hasPropertyAffordance [
+            td:hasForm [
+                # URL and content type
+                hctl:hasTarget "kafka://localhost/topic";
+                hctl:forContentType "application/json";
+                # Set Kafka parameters through W3C WoT Binding Template for Kafka
+		kafka:groupId "MyAwesomeGroup";
+            ];
+        ];
+    ];
+    rml:referenceFormulation rml:JSONPath;
+    rml:iterator "$.students[*]";
+.
 
 <http://example.com/base/TriplesMap1> a rml:TriplesMap;
-  rml:logicalSource [ a rml:LogicalSource;
-      rml:iterator "$.students[*]";
-      rml:referenceFormulation rml:JSONPath;
-      rml:source [ a rml:RelativePathSource;
-          rml:root rml:MappingDirectory;
-          rml:path "student.json"
-        ]
-    ];
+  rml:logicalSource <#KafkaStream>;
   rml:predicateObjectMap [
       rml:objectMap [
           rml:reference "$.Name"

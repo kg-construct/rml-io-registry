@@ -1,20 +1,13 @@
-## RMLTC0001a-MySQL
+## RMLIOREGTC0004d
 
-**Title**: "One column mapping, subject URI generation by using rr:template"
+**Title**: MySQL invalid table
 
-**Description**: "Tests: (1) one column mapping; (2) subject URI generation by using rr:tmplate; (3) one column to one property"
+**Description**: Handle invalid SQL table for MySQL
 
-**Error expected?** No
+**Error expected?** Yes
 
 **Input**
-```
-USE test;
-DROP TABLE IF EXISTS test.student;
-CREATE TABLE student (
-  Name VARCHAR(50)
-);
-INSERT INTO student values ('Venus');
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004d/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004d/Friends.json)
 
 **Mapping**
 ```
@@ -26,7 +19,7 @@ INSERT INTO student values ('Venus');
   rml:logicalSource [
       rml:source <http://example.com/base/#DB_source>;
       rml:referenceFormulation rml:SQL2008Table;
-      rml:iterator "student"
+      rml:iterator "sdfdfsstudent"
     ];
   rml:predicateObjectMap [
       rml:objectMap [
@@ -43,12 +36,6 @@ INSERT INTO student values ('Venus');
   d2rq:jdbcDriver "com.mysql.cj.jdbc.Driver";
   d2rq:password "";
   d2rq:username "root" .
-
-```
-
-**Output**
-```
-<http://example.com/Venus> <http://xmlns.com/foaf/0.1/name> "Venus" .
 
 ```
 

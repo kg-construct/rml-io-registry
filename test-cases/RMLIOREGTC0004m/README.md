@@ -1,23 +1,13 @@
-## RMLTC0003a-MySQL
+## RMLIOREGTC0004m
 
-**Title**: "Three columns mapping, undefined SQL Version identifier"
+**Title**: MySQL: Three columns mapping, undefined SQL Version identifier
 
-**Description**: "Tests the presence of an undefined SQL Version identifier"
+**Description**: Tests the presence of an undefined SQL Version identifier
 
 **Error expected?** Yes
 
 **Input**
-```
-USE test;
-DROP TABLE IF EXISTS test.student;
-CREATE TABLE student (
-  ID INTEGER,
-  FirstName VARCHAR(50),
-  LastName VARCHAR(50)
-);
-INSERT INTO student values ('10', 'Venus', 'Williams');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004m/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004m/Friends.json)
 
 **Mapping**
 ```
