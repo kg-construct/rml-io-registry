@@ -1,22 +1,13 @@
-## RMLTC0001a-XML
+## RMLIOREGTC0003b
 
-**Title**: "One column mapping, subject URI generation by using rr:template"
+**Title**: Missing XML value
 
-**Description**: "Tests: (1) one column mapping; (2) subject URI generation by using rr:tmplate; (3) one column to one property"
+**Description**: Handle missing XML value in rml:reference
 
-**Error expected?** No
+**Error expected?** Yes
 
 **Input**
-```
-<?xml version="1.0"?>
-
-<students>
-  <student>
-    <Name>Venus</Name>
-  </student>
-</students>
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0003b/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0003b/Friends.json)
 
 **Mapping**
 ```
@@ -34,20 +25,13 @@
     ];
   rml:predicateObjectMap [
       rml:objectMap [
-          rml:reference "Name"
+          rml:reference "NON_EXISTING"
         ];
       rml:predicate foaf:name
     ];
   rml:subjectMap [
       rml:template "http://example.com/{Name}"
     ] .
-
-```
-
-**Output**
-```
-<http://example.com/Venus> <http://xmlns.com/foaf/0.1/name> "Venus" .
-
 
 ```
 

@@ -1,20 +1,13 @@
-## RMLTC0001a-MySQL
+## RMLIOREGTC0004a
 
-**Title**: "One column mapping, subject URI generation by using rr:template"
+**Title**: Access MySQL database and column
 
-**Description**: "Tests: (1) one column mapping; (2) subject URI generation by using rr:tmplate; (3) one column to one property"
+**Description**: Access a MySQL database with D2RQ
 
 **Error expected?** No
 
 **Input**
-```
-USE test;
-DROP TABLE IF EXISTS test.student;
-CREATE TABLE student (
-  Name VARCHAR(50)
-);
-INSERT INTO student values ('Venus');
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004a/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004a/Friends.json)
 
 **Mapping**
 ```

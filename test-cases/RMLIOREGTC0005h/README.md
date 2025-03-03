@@ -1,21 +1,13 @@
-## RMLTC0002f-PostgreSQL
+## RMLIOREGTC0005h
 
-**Title**: "Two columns mapping, delimited identifiers referenced as regular identifiers"
+**Title**: PostgreSQL: Two columns mapping, delimited identifiers referenced as regular identifiers
 
-**Description**: "Tests the presence of delimited identifiers referenced as regular identifiers. Within rr:template ID is ok, but Name is not"
+**Description**: Tests the presence of delimited identifiers referenced as regular identifiers. Within rml:template ID is ok, but Name is not
 
 **Error expected?** Yes
 
 **Input**
-```
-DROP TABLE IF EXISTS Student CASCADE;
-CREATE TABLE Student (
-ID INTEGER,
-Name VARCHAR(15)
-);
-INSERT INTO Student (ID, Name) VALUES(10,'Venus');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005h/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005h/Friends.json)
 
 **Mapping**
 ```

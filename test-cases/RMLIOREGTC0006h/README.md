@@ -1,22 +1,13 @@
-## RMLTC0002f-SQLServer
+## RMLIOREGTC0006h
 
-**Title**: "Two columns mapping, delimited identifiers referenced as regular identifiers"
+**Title**: SQLServer: Two columns mapping, delimited identifiers referenced as regular identifiers
 
-**Description**: "Tests the presence of delimited identifiers referenced as regular identifiers. Within rr:template ID is ok, but Name is not"
+**Description**: Tests the presence of delimited identifiers referenced as regular identifiers. Within rml:template ID is ok, but Name is not
 
 **Error expected?** Yes
 
 **Input**
-```
-USE TestDB;
-DROP TABLE IF EXISTS TestDB.Student;
-CREATE TABLE Student (
-ID INTEGER,
-Name VARCHAR(15)
-);
-INSERT INTO Student (ID, Name) VALUES(10,'Venus');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006h/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006h/Friends.json)
 
 **Mapping**
 ```

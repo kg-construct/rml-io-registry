@@ -1,21 +1,13 @@
-## RMLSTC0006d
+## RMLIOREGTC0012a
 
-**Title**: Source with CSVW access description
+**Title**: Access a CSVW file
 
-**Description**: Test source with CSVW data access description
+**Description**: Access a CSV file described with CSVW
 
 **Error expected?** No
 
 **Input**
-```
-id;name;age
-0;Monica Geller;33
-1;Rachel Green;34
-2;Joey Tribbiani;35
-3;Chandler Bing;36
-4;Ross Geller;37
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0012a/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0012a/Friends.json)
 
 **Mapping**
 ```

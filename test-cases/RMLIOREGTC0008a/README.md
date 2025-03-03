@@ -1,42 +1,13 @@
-## RMLSTC0006e
+## RMLIOREGTC0008a
 
-**Title**: Source with Web of Things access description
+**Title**: Access JSON API over HTTP
 
-**Description**: Test source with Web of Things data access description
+**Description**: Access a JSON hosted as a HTTP Web API
 
 **Error expected?** No
 
 **Input**
-```
-[
-  { 
-    "id": 0,
-    "name": "Monica Geller",
-    "age": 33
-  },
-  { 
-    "id": 1,
-    "name": "Rachel Green",
-    "age": 34
-  },
-  { 
-    "id": 2,
-    "name": "Joey Tribbiani",
-    "age": 35
-  },
-  { 
-    "id": 3,
-    "name": "Chandler Bing",
-    "age": 36
-  },
-  { 
-    "id": 4,
-    "name": "Ross Geller",
-    "age": 37
-  }
-]
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0008a/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0008a/Friends.json)
 
 **Mapping**
 ```

@@ -1,10 +1,10 @@
-## RMLTC0001a-CSV
+## RMLIOREGTC0001b
 
-**Title**: "One column mapping, subject URI generation by using rr:template"
+**Title**: Missing CSV column
 
-**Description**: "Tests: (1) one column mapping; (2) subject URI generation by using rr:tmplate; (3) one column to one property"
+**Description**: Handle missing CSV column in rml:reference
 
-**Error expected?** No
+**Error expected?** Yes
 
 **Input**
 ```
@@ -28,20 +28,13 @@ Venus
     ];
   rml:predicateObjectMap [
       rml:objectMap [
-          rml:reference "Name"
+          rml:reference "THIS_COLUMN_DOES_NOT_EXIST"
         ];
       rml:predicate foaf:name
     ];
   rml:subjectMap [
       rml:template "http://example.com/{Name}"
     ] .
-
-```
-
-**Output**
-```
-<http://example.com/Venus> <http://xmlns.com/foaf/0.1/name> "Venus" .
-
 
 ```
 

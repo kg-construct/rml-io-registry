@@ -1,22 +1,13 @@
-## RMLTC0003a-PostgreSQL
+## RMLIOREGTC0005m
 
-**Title**: "Three columns mapping, undefined SQL Version identifier"
+**Title**: PostgreSQL: Three columns mapping, undefined SQL Version identifier
 
-**Description**: "Tests the presence of an undefined SQL Version identifier"
+**Description**: Tests the presence of an undefined SQL Version identifier
 
 **Error expected?** Yes
 
 **Input**
-```
-DROP TABLE IF EXISTS student CASCADE ;
-CREATE TABLE student (
-  "ID" INTEGER,
-  "FirstName" VARCHAR(50),
-  "LastName" VARCHAR(50)
-);
-INSERT INTO student values ('10', 'Venus', 'Williams');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005m/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005m/Friends.json)
 
 **Mapping**
 ```

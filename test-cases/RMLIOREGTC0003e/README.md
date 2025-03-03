@@ -1,53 +1,41 @@
-## RMLTC0001a-XML
+## RMLIOREGTC0003e
 
-**Title**: "One column mapping, subject URI generation by using rr:template"
+**Title**: XML attributes selection
 
-**Description**: "Tests: (1) one column mapping; (2) subject URI generation by using rr:tmplate; (3) one column to one property"
+**Description**: Test generation of triples with selected XML attributes
 
 **Error expected?** No
 
 **Input**
-```
-<?xml version="1.0"?>
-
-<students>
-  <student>
-    <Name>Venus</Name>
-  </student>
-</students>
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0003e/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0003e/Friends.json)
 
 **Mapping**
 ```
+prefix ex: <http://example.com/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rml: <http://w3id.org/rml/> .
 
-<http://example.com/base/TriplesMap1> a rml:TriplesMap;
-  rml:logicalSource [ a rml:LogicalSource;
-      rml:iterator "/students/student";
-      rml:referenceFormulation rml:XPath;
-      rml:source [ a rml:RelativePathSource;
-          rml:root rml:MappingDirectory;
-          rml:path "student.xml"
-        ]
-    ];
-  rml:predicateObjectMap [
-      rml:objectMap [
-          rml:reference "Name"
-        ];
-      rml:predicate foaf:name
-    ];
-  rml:subjectMap [
-      rml:template "http://example.com/{Name}"
-    ] .
+<http://example.com/base/TriplesMap1> a rml:TriplesMap ;
+    rml:logicalSource [ a rml:LogicalSource ;
+            rml:iterator "/persons/person" ;
+            rml:referenceFormulation rml:XPath ;
+            rml:source _:b347486 ] ;
+    rml:predicateObjectMap [ rml:objectMap [ rml:reference "@amount" ] ;
+            rml:predicate ex:owes ] ;
+    rml:subjectMap [ rml:class foaf:Person ;
+            rml:template "http://example.com/{@fname};{@lname}" ] .
+
+_:b347486 a rml:RelativePathSource ;
+    rml:path "student.xml" .
 
 ```
 
 **Output**
 ```
-<http://example.com/Venus> <http://xmlns.com/foaf/0.1/name> "Venus" .
-
+<http://example.com/Bob;Smith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://example.com/Bob;Smith> <http://example.com/owes> "30.0E0" .
+<http://example.com/Sue;Jones> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://example.com/Sue;Jones> <http://example.com/owes> "20.0E0" .
 
 ```
 

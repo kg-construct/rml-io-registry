@@ -1,23 +1,13 @@
-## RMLTC0005b-PostgreSQL
+## RMLIOREGTC0005o
 
-**Title**: "Default mapping"
+**Title**: PostgreSQL: Default mapping
 
-**Description**: "Tests the generation of a default mapping for tables without a primary key"
+**Description**: Tests the generation of a default mapping for tables without a primary key
 
 **Error expected?** No
 
 **Input**
-```
-DROP TABLE IF EXISTS IOUs;
-CREATE TABLE IOUs (
-      fname VARCHAR(20),
-      lname  VARCHAR(20),
-      amount FLOAT);
-INSERT INTO IOUs (fname, lname, amount) VALUES ('Bob', 'Smith', 30);
-INSERT INTO IOUs (fname, lname, amount) VALUES ('Sue', 'Jones', 20);
-INSERT INTO IOUs (fname, lname, amount) VALUES ('Bob', 'Smith', 30);
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005o/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005o/Friends.json)
 
 **Mapping**
 ```

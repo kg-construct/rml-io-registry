@@ -1,36 +1,13 @@
-## RMLTC0009d-MySQL
+## RMLIOREGTC0004q
 
-**Title**: "Named column in logical table"
+**Title**: MySQL: Named column in logical table
 
-**Description**: "Test a logical table named column."
+**Description**: Test a logical table named column.
 
 **Error expected?** No
 
 **Input**
-```
-USE test;
-DROP TABLE IF EXISTS test.Student;
-DROP TABLE IF EXISTS test.Sport;
-
-CREATE TABLE Sport (
-ID integer,
-Name varchar (50),
-PRIMARY KEY (ID)
-);
-
-CREATE TABLE Student (
-ID integer,
-Name varchar(50),
-Sport integer,
-PRIMARY KEY (ID),
-FOREIGN KEY(Sport) REFERENCES Sport(ID)
-);
-
-INSERT INTO Sport (ID, Name) VALUES (100,'Tennis');
-INSERT INTO Student (ID, Name, Sport) VALUES (10,'Venus Williams', 100);
-INSERT INTO Student (ID, Name, Sport) VALUES (20,'Demi Moore', NULL);
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004q/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004q/Friends.json)
 
 **Mapping**
 ```

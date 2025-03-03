@@ -1,21 +1,13 @@
-## RMLTC0002h-PostgreSQL
+## RMLIOREGTC0005j
 
-**Title**: "Two columns mapping, duplicate column name in SELECT"
+**Title**: PostgreSQL: Two columns mapping, duplicate column name in SELECT
 
-**Description**: "Tests the presence of duplicate column names in the SELECT list of the SQL query"
+**Description**: Tests the presence of duplicate column names in the SELECT list of the SQL query
 
 **Error expected?** Yes
 
 **Input**
-```
-DROP TABLE IF EXISTS student CASCADE ;
-CREATE TABLE student (
-  "ID" INTEGER,
-  "Name" VARCHAR(50)
-);
-INSERT INTO student values ('10', 'Venus');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005j/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005j/Friends.json)
 
 **Mapping**
 ```

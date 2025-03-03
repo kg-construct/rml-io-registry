@@ -1,22 +1,13 @@
-## RMLTC0002g-MySQL
+## RMLIOREGTC0004i
 
-**Title**: "Two columns mapping, invalid SQL query"
+**Title**: MySQL: Two columns mapping, invalid SQL query
 
-**Description**: "Tests the presence of an invalid SQL query"
+**Description**: Tests the presence of an invalid SQL query
 
 **Error expected?** Yes
 
 **Input**
-```
-USE test;
-DROP TABLE IF EXISTS test.student;
-CREATE TABLE student (
-  ID INTEGER,
-  Name VARCHAR(50)
-);
-INSERT INTO student values ('10', 'Venus');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004i/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004i/Friends.json)
 
 **Mapping**
 ```

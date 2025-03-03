@@ -1,23 +1,13 @@
-## RMLTC0001a-SQLServer
+## RMLIOREGTC0006c
 
-**Title**: "One column mapping, subject URI generation by using rr:template"
+**Title**: SQLServer NULL
 
-**Description**: "Tests: (1) one column mapping; (2) subject URI generation by using rr:tmplate; (3) one column to one property"
+**Description**: Handle SQLServer NULL value
 
 **Error expected?** No
 
 **Input**
-```
-USE TestDB;
-EXEC sp_msforeachtable 'ALTER TABLE ? NOCHECK CONSTRAINT all'
-EXEC sp_msforeachtable 'DROP TABLE ?'
-
-CREATE TABLE student (
-  "Name" VARCHAR(50)
-);
-INSERT INTO student values ('Venus');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006c/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006c/Friends.json)
 
 **Mapping**
 ```
@@ -29,7 +19,7 @@ INSERT INTO student values ('Venus');
   rml:logicalSource [
       rml:source <http://example.com/base/#DB_source>;
       rml:referenceFormulation rml:SQL2008Table;
-      rml:iterator "student"
+      rml:iterator "dsfjdlfjks;fkstudent"
     ];
   rml:predicateObjectMap [
       rml:objectMap [
@@ -51,7 +41,9 @@ INSERT INTO student values ('Venus');
 
 **Output**
 ```
-<http://example.com/Venus> <http://xmlns.com/foaf/0.1/name> "Venus" .
+<http://example.com/Person/2/Bob/September%2C%202010> <http://example.com/BirthDay> "September, 2010" .
+
+
 
 ```
 

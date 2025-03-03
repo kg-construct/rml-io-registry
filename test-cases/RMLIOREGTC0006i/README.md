@@ -1,24 +1,13 @@
-## RMLTC0002g-SQLServer
+## RMLIOREGTC0006i
 
-**Title**: "Two columns mapping, invalid SQL query"
+**Title**: SQLServer: Two columns mapping, invalid SQL query
 
-**Description**: "Tests the presence of an invalid SQL query"
+**Description**: Tests the presence of an invalid SQL query
 
 **Error expected?** Yes
 
 **Input**
-```
-USE TestDB;
-EXEC sp_msforeachtable 'ALTER TABLE ? NOCHECK CONSTRAINT all'
-EXEC sp_msforeachtable 'DROP TABLE ?'
-
-CREATE TABLE student (
-  "ID" INTEGER,
-  "Name" VARCHAR(50)
-);
-INSERT INTO student values ('10', 'Venus');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006i/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006i/Friends.json)
 
 **Mapping**
 ```

@@ -1,35 +1,13 @@
-## RMLTC0009c-PostgreSQL
+## RMLIOREGTC0005p
 
-**Title**: "Unnamed column in a logical table"
+**Title**: PostgreSQL: Unnamed column in a logical table
 
-**Description**: "Test a logical table with unnamed column."
+**Description**: Test a logical table with unnamed column.
 
 **Error expected?** No
 
 **Input**
-```
-DROP TABLE IF EXISTS Sport;
-DROP TABLE IF EXISTS Student;
-
-CREATE TABLE Sport (
-ID integer,
-Name varchar (50),
-PRIMARY KEY (ID)
-);
-
-CREATE TABLE Student (
-ID integer,
-Name varchar(50),
-Sport integer,
-PRIMARY KEY (ID),
-FOREIGN KEY(Sport) REFERENCES Sport(ID)
-);
-
-INSERT INTO Sport (ID, Name) VALUES (100,'Tennis');
-INSERT INTO Student (ID, Name, Sport) VALUES (10,'Venus Williams', 100);
-INSERT INTO Student (ID, Name, Sport) VALUES (20,'Demi Moore', NULL);
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005p/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005p/Friends.json)
 
 **Mapping**
 ```

@@ -1,21 +1,13 @@
-## RMLTC0002e-PostgreSQL
+## RMLIOREGTC0005g
 
-**Title**: "Two columns mapping, an undefined rr:tableName"
+**Title**: PostgreSQL: Two columns mapping, an undefined rml:path
 
-**Description**: "Tests the presence of an undefined rr:tableName"
+**Description**: Tests the presence of an undefined rml:path
 
 **Error expected?** Yes
 
 **Input**
-```
-DROP TABLE IF EXISTS student CASCADE ;
-CREATE TABLE student (
-  "ID" INTEGER,
-  "Name" VARCHAR(50)
-);
-INSERT INTO student values ('10', 'Venus');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005g/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005g/Friends.json)
 
 **Mapping**
 ```

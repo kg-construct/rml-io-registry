@@ -1,22 +1,13 @@
-## RMLTC0002h-MySQL
+## RMLIOREGTC0004j
 
-**Title**: "Two columns mapping, duplicate column name in SELECT"
+**Title**: MySQL: Two columns mapping, duplicate column name in SELECT
 
-**Description**: "Tests the presence of duplicate column names in the SELECT list of the SQL query"
+**Description**: Tests the presence of duplicate column names in the SELECT list of the SQL query
 
 **Error expected?** Yes
 
 **Input**
-```
-USE test;
-DROP TABLE IF EXISTS test.student;
-CREATE TABLE student (
-  ID INTEGER,
-  Name VARCHAR(50)
-);
-INSERT INTO student values ('10', 'Venus');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004j/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004j/Friends.json)
 
 **Mapping**
 ```

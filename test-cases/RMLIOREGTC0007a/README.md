@@ -1,42 +1,13 @@
-## RMLSTC0006a
+## RMLIOREGTC0007a
 
-**Title**: Source with DCAT access description
+**Title**: Access JSON file as DCAT Dataset
 
-**Description**: Test source with DCAT data access description
+**Description**: Access a JSON file via IRI with DCAT Dataset
 
 **Error expected?** No
 
 **Input**
-```
-[
-  { 
-    "id": 0,
-    "name": "Monica Geller",
-    "age": 33
-  },
-  { 
-    "id": 1,
-    "name": "Rachel Green",
-    "age": 34
-  },
-  { 
-    "id": 2,
-    "name": "Joey Tribbiani",
-    "age": 35
-  },
-  { 
-    "id": 3,
-    "name": "Chandler Bing",
-    "age": 36
-  },
-  { 
-    "id": 4,
-    "name": "Ross Geller",
-    "age": 37
-  }
-]
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0007a/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0007a/Friends.json)
 
 **Mapping**
 ```

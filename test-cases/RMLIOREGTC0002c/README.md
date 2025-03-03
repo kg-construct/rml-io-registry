@@ -1,20 +1,13 @@
-## RMLTC0001a-JSON
+## RMLIOREGTC0002c
 
-**Title**: "One column mapping, subject URI generation by using rr:template"
+**Title**: Invalid JSONpath
 
-**Description**: "Tests: (1) one column mapping; (2) subject URI generation by using rr:tmplate; (3) one column to one property"
+**Description**: Handle invalid JSONPath (unparseable)
 
-**Error expected?** No
+**Error expected?** Yes
 
 **Input**
-```
-{
-  "students": [{
-    "Name":"Venus"
-  }]
-}
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0002c/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0002c/Friends.json)
 
 **Mapping**
 ```
@@ -32,20 +25,13 @@
     ];
   rml:predicateObjectMap [
       rml:objectMap [
-          rml:reference "$.Name"
+          rml:reference "Dhkef;esfkdleshfjdls;fk"
         ];
       rml:predicate foaf:name
     ];
   rml:subjectMap <http://example.com/base/#NameSubjectMap> .
 
 <http://example.com/base/#NameSubjectMap> rml:template "http://example.com/{$.Name}" .
-
-```
-
-**Output**
-```
-<http://example.com/Venus> <http://xmlns.com/foaf/0.1/name> "Venus" .
-
 
 ```
 

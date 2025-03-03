@@ -1,24 +1,13 @@
-## RMLTC0002i-SQLServer
+## RMLIOREGTC0006k
 
-**Title**: "Two columns mapping, SQL Version identifier"
+**Title**: SQLServer: Two columns mapping, SQL Version identifier
 
-**Description**: "Tests the presence of a SQL Version identifier "
+**Description**: Tests the presence of a SQL Version identifier 
 
-**Error expected?** Yes
+**Error expected?** No
 
 **Input**
-```
-USE TestDB;
-EXEC sp_msforeachtable 'ALTER TABLE ? NOCHECK CONSTRAINT all'
-EXEC sp_msforeachtable 'DROP TABLE ?'
-
-CREATE TABLE student (
-  "ID" INTEGER,
-  "Name" VARCHAR(50)
-);
-INSERT INTO student values ('10', 'Venus');
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006k/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006k/Friends.json)
 
 **Mapping**
 ```
@@ -47,6 +36,12 @@ INSERT INTO student values ('10', 'Venus');
   d2rq:jdbcDriver "com.microsoft.sqlserver.jdbc.SQLServerDriver";
   d2rq:password "YourSTRONG!Passw0rd;";
   d2rq:username "sa" .
+
+```
+
+**Output**
+```
+<http://example.com/10/Venus> <http://example.com/id> "10";
 
 ```
 
