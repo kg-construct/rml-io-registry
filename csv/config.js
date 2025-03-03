@@ -46,7 +46,7 @@ var respecConfig = {
       companyURL: "https://knows.idlab.ugent.be/"
     },
   ],
-  edDraftURI: "https://w3id.org/rml/io-registry/json-path/spec",
+  edDraftURI: "https://w3id.org/rml/io-registry/csv/spec",
   editors: [
     {
       name: "Ben De Meester",
