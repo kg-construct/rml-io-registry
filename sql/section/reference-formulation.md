@@ -20,3 +20,20 @@ An <a data-cite="RML-Core#dfn-expression">expression</a> for <a data-cite="RML-C
 
 An <a data-cite="RML-Core#dfn-expression">expression</a> is evaluated against a <a data-cite="RML-Core#dfn-logical-iteration">logical iteration</a> which is a [=SQL value=].
 The result of evaluating the <a data-cite="RML-Core#dfn-expression">expression</a> is an [=SQL row=], which MUST be transformed to a list of [=SQL values=] that forms the <a data-cite="RML-Core#dfn-expression-evaluation-result">expression evaluation result</a>. The order of the [=SQL row=] MUST be preserved in the <a data-cite="RML-Core#dfn-expression-evaluation-result">expression evaluation result</a>.
+
+## Ill-formed joins
+
+Joins between tables with different data types are not allowed. Some SQL engines are forgiving and allow it, but this is not default behavior.
+
+For example:
+
+```
+CREATE TABLE student (
+  Sport VARCHAR(50),
+);
+CREATE TABLE sport (
+  ID INTEGER,
+);
+```
+
+A join between the table `student` column `Sport` and table `sport` column `ID` is not valid.
