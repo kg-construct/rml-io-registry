@@ -17,7 +17,7 @@
 
 <http://example.com/base/TriplesMap1> a rml:TriplesMap;
   rml:logicalSource [
-      rml:iterator "SELECT Name, ID FROM student";
+      rml:iterator "SELECT ID, Name FROM student";
       rml:referenceFormulation rml:SQL2008Query;
       rml:source <http://example.com/base/#DB_source>
     ];

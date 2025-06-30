@@ -19,34 +19,32 @@ ID;Name
 **Mapping**
 ```
 # A single csvw:null value
-
+@prefix rml: <http://w3id.org/rml/> .
 @prefix csvw: <http://www.w3.org/ns/csvw#> .
-@prefix rml: <http://www.w3.org/ns/r2rml#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix ex: <http://example.com/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
 @base <http://example.com/base/> .
 
 <TriplesMap1> a rml:TriplesMap;
-    
-  rml:logicalSource [ 
+
+  rml:logicalSource [
     rml:source <#CSVW_source>;
     rml:referenceFormulation rml:CSV
   ];
 
-  rml:subjectMap [ 
+  rml:subjectMap [
     rml:template "http://example.com/{ID}/{Name}";
-    rml:class foaf:Person 
+    rml:class foaf:Person
   ];
 
-  rml:predicateObjectMap [ 
-    rml:predicate ex:id ; 
+  rml:predicateObjectMap [
+    rml:predicate ex:id ;
     rml:objectMap [ rml:reference "ID" ]
   ];
 
-  rml:predicateObjectMap [ 
-    rml:predicate foaf:name ; 
+  rml:predicateObjectMap [
+    rml:predicate foaf:name ;
     rml:objectMap [ rml:reference "Name" ]
   ].
 

@@ -11,9 +11,8 @@
 
 **Mapping**
 ```
+@prefix rml: <http://w3id.org/rml/> .
 @prefix csvw: <http://www.w3.org/ns/csvw#> .
-@prefix rml: <http://www.w3.org/ns/r2rml#>.
-@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix schema: <http://schema.org/>.
 @prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#lat>.

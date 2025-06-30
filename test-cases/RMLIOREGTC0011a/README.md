@@ -11,10 +11,10 @@
 
 **Mapping**
 ```
-@prefix rml: <http://w3id.org/rml/>;
-@prefix sd: <http://www.w3.org/ns/sparql-service-description#>;
-@prefix foaf: <http://xmlns.com/foaf/0.1/>;
-@prefix formats: <http://www.w3.org/ns/formats/>;
+@prefix rml: <http://w3id.org/rml/>.
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix formats: <http://www.w3.org/ns/formats/>.
 
 <#SDSourceAccess> a rml:Source, sd:Service;
   sd:endpoint <http://dbpedia.org/sparql/>;
@@ -26,9 +26,9 @@
     rml:source <#SDSourceAccess>;
     rml:referenceFormulation formats:SPARQL_Results_CSV;
     rml:iterator """
-      PREFIX dbo: 
-      PREFIX rdf: 
-      PREFIX rdfs: 
+      PREFIX dbo: <http://dbpedia.org/ontology/>
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
       SELECT DISTINCT ?actor ?name WHERE {
         ?tvshow rdf:type dbo:TelevisionShow .
         ?tvshow rdfs:label "The Big Bang Theory"@en .
