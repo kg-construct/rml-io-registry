@@ -12,7 +12,7 @@
 **Mapping**
 ```
 @prefix csvw: <http://www.w3.org/ns/csvw#> .
-@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rml: <http://www.w3.org/ns/r2rml#>.
 @prefix rml: <http://semweb.mmlab.be/ns/rml#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix schema: <http://schema.org/>.
@@ -34,17 +34,17 @@
        csvw:delimiter ";"
    ] .
 
-<#ProjectMapping> a rr:TriplesMap;
+<#ProjectMapping> a rml:TriplesMap;
   rml:logicalSource <#LogicalSourceGrant> ;
 
-  rr:subjectMap [
-    rr:template "http://snf.ch/project/{GrantNumber}";
-    rr:class schema:ResearchProject
+  rml:subjectMap [
+    rml:template "http://snf.ch/project/{GrantNumber}";
+    rml:class schema:ResearchProject
   ] ;
 
-  rr:predicateObjectMap [
-    rr:predicate schema:description ;
-    rr:objectMap [
+  rml:predicateObjectMap [
+    rml:predicate schema:description ;
+    rml:objectMap [
       rml:reference "Abstract" # first column's name
     ]
   ] .
