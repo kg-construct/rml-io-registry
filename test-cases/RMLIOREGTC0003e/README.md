@@ -11,7 +11,7 @@
 
 **Mapping**
 ```
-prefix ex: <http://example.com/> .
+@prefix ex: <http://example.com/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rml: <http://w3id.org/rml/> .
 

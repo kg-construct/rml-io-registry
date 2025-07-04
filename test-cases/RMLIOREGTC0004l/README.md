@@ -17,13 +17,13 @@
 
 <http://example.com/base/TriplesMap1> a rml:TriplesMap;
   rml:logicalSource [
-      rml:iterator "SELECT NoColumnName, Name FROM student";
+      rml:iterator "SELECT NoColumnName, ID, Name FROM student";
       rml:referenceFormulation rml:SQL2008Query;
       rml:source <http://example.com/base/#DB_source>
     ];
   rml:predicateObjectMap [
       rml:objectMap [
-          rml:reference "IDs"
+          rml:reference "ID"
         ];
       rml:predicate ex:id
     ];
