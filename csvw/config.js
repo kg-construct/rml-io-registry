@@ -39,12 +39,12 @@ var respecConfig = {
       companyURL: "https://skemu.com"
     },
     {
-      name: "Dylan Van Assche",
+      name: "Sitt Min Oo",
       company: "Ghent University &ndash; imec &ndash; IDLab",
-      url: "https://dylanvanassche.be",
-      orcid: "0000-0002-7195-9935",
+      url: "https://data.knows.idlab.ugent.be/person/minoo/#me",
+      orcid: "0000-0001-9157-7507",
       companyURL: "https://knows.idlab.ugent.be/"
-    },
+    }
   ],
   edDraftURI: "https://w3id.org/rml/io-registry/csvw/spec",
   editors: [
@@ -63,18 +63,46 @@ var respecConfig = {
       companyURL: "https://skemu.com"
     },
     {
+      name: "Sitt Min Oo",
+      company: "Ghent University &ndash; imec &ndash; IDLab",
+      url: "https://data.knows.idlab.ugent.be/person/minoo/#me",
+      orcid: "0000-0001-9157-7507",
+      companyURL: "https://knows.idlab.ugent.be/"
+    }
+  ],
+  formerEditors: [
+    {
       name: "Dylan Van Assche",
       company: "Ghent University &ndash; imec &ndash; IDLab",
       url: "https://dylanvanassche.be",
       orcid: "0000-0002-7195-9935",
       companyURL: "https://knows.idlab.ugent.be/"
-    },
-  ],
-  formerEditors: [
+    }
   ],
   github: "https://github.com/kg-construct/rml-io-registry",
   license: "w3c-software-doc",
   localBiblio: {
+    "Turtle": {
+      title: "RDF 1.1 Turtle",
+      href: "https://www.w3.org/TR/turtle/",
+      status: "W3C Recommendation",
+      publisher: "W3C",
+      date: "25 February 2014",
+    },
+    "CSVW-Namespace": {
+      title: "CSVW Namespace Vocabulary Terms",
+      href: "https://www.w3.org/ns/csvw",
+      status: "W3C Document",
+      publisher: "W3C",
+      date: "06 June 2017",
+    },
+    "CSV": {
+      title: "Common Format and MIME Type for Comma-Separated Values (CSV) Files",
+      href: "https://www.ietf.org/rfc/rfc4180.txt",
+      status: "Internet Standard",
+      publisher: "IETF",
+      date: "October 2005",
+    },
     "RML-Core": {
       title: "RML-Core",
       href: "https://w3id.org/rml/core/spec",
@@ -91,7 +119,7 @@ var respecConfig = {
     },
   },
   otherLinks: [],
-  shortName: "RML-Ref-JSON-Path",
+  shortName: "RML-IO-Registry",
   specStatus: "CG-DRAFT",
   // W3C config
   copyrightStart: "2024",
