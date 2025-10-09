@@ -7,17 +7,25 @@
     <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
     <style type="text/css">
         /* Adapted from R2RML */
-        aside.ex-input,
-        aside.ex-mapping,
-        aside.ex-output {
-            word-wrap:normal;
-            margin-top: 1.5em;
-            padding: 1em;
-            font-size: 80%;
+        pre { 
+            word-wrap:normal
         }
-        aside.ex-input:before,
-        aside.ex-mapping:before,
-        aside.ex-output:before {
+        pre.ex-input,
+        pre.ex-mapping, 
+        pre.ex-output,
+        pre.ex-target,
+        pre.ex-source,
+        pre.ex-access {
+            margin-top: 1.5em;
+            padding: 1em; 
+            font-size: 75%;
+        }
+        pre.ex-input:before,
+        pre.ex-mapping:before,
+        pre.ex-output:before, 
+        pre.ex-target:before,
+        pre.ex-source:before,
+        pre.ex-access:before {
             background: white;
             display: block;
             font-family: sans-serif;
@@ -27,53 +35,72 @@
             width: 18em;
         }
         /* Input data example */
-        aside.ex-input {
+        pre.ex-input {
             background: #cee;
         }
-        aside.ex-input,
-        aside.ex-input:before {
+        pre.ex-input,
+        pre.ex-input:before {
             border: 1px solid #acc;
-            overflow: auto;
         }
-        aside.ex-input:before {
+        pre.ex-input:before {
             content: "Example input data";
         }
         /* RML mapping example */
-        aside.ex-mapping {
+        pre.ex-mapping {
             background: #eeb;
         }
-        aside.ex-mapping,
-        aside.ex-mapping:before {
+        pre.ex-mapping,
+        pre.ex-mapping:before {
             border: 1px solid #cc9;
-            overflow: auto;
         }
-        aside.ex-mapping:before {
+        pre.ex-mapping:before {
             content: "Example RML mapping";
         }
         /* Output RDF example */
-        aside.ex-output {
+        pre.ex-output {
             background: #cfc;
         }
-        aside.ex-output,
-        aside.ex-output:before {
+        pre.ex-output,
+        pre.ex-output:before {
             border: 1px solid #aca;
-            overflow: auto;
         }
-        aside.ex-output:before {
-            content: "Example output data";
+        pre.ex-output:before {
+            content: "Example output RDF";
         }
-        table, th, td {
-          background: white;
-          border-collapse: collapse;
-          border: 1px solid;
+        /* Source's description example */
+        pre.ex-source {
+            background: #ffc8d4;
         }
-        th, td {
-          padding: 5px;
-          text-align: left;
+        pre.ex-source,
+        pre.ex-source:before {
+            border: 1px solid #bbb;
         }
-        th {
-          font-weight: bold;
+        pre.ex-source:before {
+            content: "Example Source description";
         }
+        /* Target's description example */
+        pre.ex-target {
+            background: #ffc8d4;
+        }
+        pre.ex-target,
+        pre.ex-target:before {
+            border: 1px solid #bbb;
+        }
+        pre.ex-target:before {
+            content: "Example Target description";
+        }
+        /* Data access description example */
+        pre.ex-access {
+            background: #d4dddd;
+        }
+        pre.ex-access,
+        pre.ex-access:before {
+            border: 1px solid #cca;
+        }
+        pre.ex-access:before {
+            content: "Example data access description";
+        }
+
     </style>
     <script src = config.js class="remove">
     </script>

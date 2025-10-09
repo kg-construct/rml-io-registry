@@ -12,6 +12,6 @@ The following namespace prefixes are used throughout the rest of the document un
 
 The examples are contained in color-coded boxes. We use the Turtle syntax [[Turtle]] to write RDF.
 
-<aside class="ex-mapping">
+<pre class="ex-mapping">
 # This box contains an example mapping
-</aside>
+</pre>

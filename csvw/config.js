@@ -82,6 +82,13 @@ var respecConfig = {
   github: "https://github.com/kg-construct/rml-io-registry",
   license: "w3c-software-doc",
   localBiblio: {
+    "Metadata-Tabular":{
+      title: "Metadata Vocabulary for Tabular Data",
+      href: "https://www.w3.org/TR/tabular-metadata/",
+      status: "W3C Recommendation",
+      publisher: "W3C",
+      date: "17 December 2015",
+    }, 
     "Turtle": {
       title: "RDF 1.1 Turtle",
       href: "https://www.w3.org/TR/turtle/",
