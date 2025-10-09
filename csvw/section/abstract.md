@@ -1,5 +1,3 @@
-# Abstract
-
 This document provides an overview of the CSVW reference formulation, 
 the vocabulary used to define it, and its natural RDF mappings. 
 The CSVW reference formulation utilizes CSVW metadata
