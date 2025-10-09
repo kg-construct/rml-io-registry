@@ -1,4 +1,4 @@
-## Document Conventions {#document-convention}
+# Document Conventions {#document-convention}
 
 The following namespace prefixes are used throughout the rest of the document unless otherwise stated.
 
@@ -11,6 +11,10 @@ The following namespace prefixes are used throughout the rest of the document un
 | `:`     | http://example.org/               |
 
 The examples are contained in color-coded boxes. We use the Turtle syntax [[Turtle]] to write RDF.
+
+<pre class="ex-input">
+# This box contains an example input data
+</pre>
 
 <pre class="ex-mapping">
 # This box contains an example mapping
