@@ -7,7 +7,17 @@
 **Error expected?** No
 
 **Input**
- [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0002d/student.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0002d/student.json)
+```
+{
+  "students": [{
+    "Name":"Venus"
+  },
+  {
+    "Name": null
+  }]
+}
+
+```
 
 **Mapping**
 ```

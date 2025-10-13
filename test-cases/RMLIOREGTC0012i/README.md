@@ -7,7 +7,15 @@
 **Error expected?** No
 
 **Input**
- [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0012i/Friends.csv](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0012i/Friends.csv)
+```
+'id','name','age'
+0,Monica Geller,33
+1,Rachel Green,34
+2,Joey Tribbiani,35
+3,Chandler Bing,36
+4,Ross Geller,37
+
+```
 
 **Mapping**
 ```

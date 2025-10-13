@@ -7,7 +7,16 @@
 **Error expected?** No
 
 **Input**
- [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005n/resource.sql](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0005n/resource.sql)
+```
+DROP TABLE IF EXISTS student CASCADE ;
+CREATE TABLE student (
+  id INTEGER,
+  firstname VARCHAR(50),
+  lastname VARCHAR(50)
+);
+INSERT INTO student values ('10', 'Venus', 'Williams');
+
+```
 
 **Mapping**
 ```

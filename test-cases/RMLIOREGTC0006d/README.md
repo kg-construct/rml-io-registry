@@ -7,7 +7,21 @@
 **Error expected?** Yes
 
 **Input**
- [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006d/resource.sql](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0006d/resource.sql)
+```
+USE TestDB;
+DROP TABLE IF EXISTS Person;
+
+CREATE TABLE Person (
+ID integer,
+Name varchar(50),
+DateOfBirth varchar(50),
+PRIMARY KEY (ID)
+);
+INSERT INTO Person (ID, Name, DateOfBirth) VALUES (1,'Alice', NULL);
+INSERT INTO Person (ID, Name, DateOfBirth) VALUES (2,'Bob', 'September, 2010');
+
+
+```
 
 **Mapping**
 ```

@@ -7,7 +7,16 @@
 **Error expected?** No
 
 **Input**
- [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0003a/student.xml](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0003a/student.xml)
+```
+<?xml version="1.0"?>
+
+<students>
+  <student>
+    <Name>Venus</Name>
+  </student>
+</students>
+
+```
 
 **Mapping**
 ```

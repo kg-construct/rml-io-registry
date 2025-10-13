@@ -7,7 +7,16 @@
 **Error expected?** Yes
 
 **Input**
- [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004h/resource.sql](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004h/resource.sql)
+```
+USE test;
+DROP TABLE IF EXISTS test.Student;
+CREATE TABLE Student (
+ID INTEGER,
+Name VARCHAR(15)
+);
+INSERT INTO Student (ID, Name) VALUES(10,'Venus');
+
+```
 
 **Mapping**
 ```

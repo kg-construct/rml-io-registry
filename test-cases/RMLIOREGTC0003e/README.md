@@ -7,7 +7,19 @@
 **Error expected?** No
 
 **Input**
- [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0003e/student.xml](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0003e/student.xml)
+```
+<?xml version="1.0"?>
+
+<persons>
+  <person fname="Bob" lname="Smith" amount="30.0E0">
+  </person>
+  <person fname="Sue" lname="Jones" amount="20.0E0">
+  </person>
+  <person fname="Bob" lname="Smith" amount="30.0E0">
+  </person>
+</persons>
+
+```
 
 **Mapping**
 ```

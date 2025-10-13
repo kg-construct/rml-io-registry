@@ -7,7 +7,14 @@
 **Error expected?** No
 
 **Input**
- [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004a/resource.sql](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0004a/resource.sql)
+```
+USE test;
+DROP TABLE IF EXISTS test.student;
+CREATE TABLE student (
+  Name VARCHAR(50)
+);
+INSERT INTO student values ('Venus');
+```
 
 **Mapping**
 ```

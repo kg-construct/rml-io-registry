@@ -7,7 +7,11 @@
 **Error expected?** No
 
 **Input**
- [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0012f/student.csv](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0012f/student.csv)
+```
+ID,Name
+10,Venus
+
+```
 
 **Mapping**
 ```
