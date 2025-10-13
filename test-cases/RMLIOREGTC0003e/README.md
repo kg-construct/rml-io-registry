@@ -7,7 +7,7 @@
 **Error expected?** No
 
 **Input**
- [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0003e/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0003e/Friends.json)
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0003e/student.xml](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0003e/student.xml)
 
 **Mapping**
 ```

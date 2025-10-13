@@ -7,13 +7,7 @@
 **Error expected?** No
 
 **Input**
-```
-# comments
-ID,Name
-10,Venus
-# comment
-
-```
+ [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0012e/student.csv](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0012e/student.csv)
 
 **Mapping**
 ```

@@ -6,9 +6,6 @@
 
 **Error expected?** No
 
-**Input**
- [http://w3id.org/rml/resources/rml-io/RMLIOREGTC0011a/Friends.json](http://w3id.org/rml/resources/rml-io/RMLIOREGTC0011a/Friends.json)
-
 **Mapping**
 ```
 @prefix rml: <http://w3id.org/rml/>.
