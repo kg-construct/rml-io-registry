@@ -23,3 +23,9 @@ An <a data-cite="RML-Core#dfn-expression">expression</a> for <a data-cite="RML-C
 
 An <a data-cite="RML-Core#dfn-expression">expression</a> is evaluated against a <a data-cite="RML-Core#dfn-logical-iteration">logical iteration</a> which is a [=XML value=].
 The result of evaluating the <a data-cite="RML-Core#dfn-expression">expression</a> is a [=nodelist=], which MUST be transformed to a list of [=XML values=] that forms the <a data-cite="RML-Core#dfn-expression-evaluation-result">expression evaluation result</a>. The order of the [=nodelist=] MUST be preserved in the <a data-cite="RML-Core#dfn-expression-evaluation-result">expression evaluation result</a>.
+
+
+### Handling absence of values in JSON data  
+
+The result of evaluating an <a data-cite="RML-Core#dfn-expression">expression</a> with a
+non-existent XPath in the input XML data is a NULL value.
