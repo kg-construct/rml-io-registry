@@ -23,6 +23,16 @@ async function loadTurtle() {
 var respecConfig = {
   // check https://respec.org/docs/ for the meaning of these keys
   preProcess: [loadTurtle],
+  github: "https://github.com/kg-construct/rml-io-registry",
+  license: "w3c-software-doc",
+  edDraftURI: "https://w3id.org/rml/io-registry/csv/spec",
+  otherLinks: [],
+  shortName: "RML-Ref-JSON-Path",
+  specStatus: "CG-DRAFT",
+  // W3C config
+  copyrightStart: "2024",
+  doJsonLd: true,
+  group: "kg-construct",
   authors: [
     {
       name: "Sitt Min Oo",
@@ -53,7 +63,6 @@ var respecConfig = {
       companyURL: "https://knows.idlab.ugent.be/"
     },
   ],
-  edDraftURI: "https://w3id.org/rml/io-registry/csv/spec",
   editors: [
     {
       name: "Sitt Min Oo",
@@ -86,8 +95,6 @@ var respecConfig = {
       companyURL: "https://knows.idlab.ugent.be/"
     },
   ],
-  github: "https://github.com/kg-construct/rml-io-registry",
-  license: "w3c-software-doc",
   localBiblio: {
     "CSV":{
         href: "https://www.rfc-editor.org/rfc/rfc4180",
@@ -115,11 +122,4 @@ var respecConfig = {
       date: "12 March 2024",
     },
   },
-  otherLinks: [],
-  shortName: "RML-Ref-JSON-Path",
-  specStatus: "CG-DRAFT",
-  // W3C config
-  copyrightStart: "2024",
-  doJsonLd: true,
-  group: "kg-construct",
 };
