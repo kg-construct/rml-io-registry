@@ -110,5 +110,18 @@ var respecConfig = {
       publisher: "W3C",
       date: "12 March 2024",
     },
+    "JSONPath": {
+        href: "https://www.rfc-editor.org/rfc/rfc9535",
+        title: "JSONPath: Query Expressions for JSON",
+        authors: [
+            "S. Gössner, Ed.",
+            "G. Normington, Ed.",
+            "C. Bormann, Ed."
+        ],
+        status: "Proposed Standard",
+        publisher: "IETF",
+        id: "rfc9535",
+        date: "February 2024"
+    }
   },
 };
