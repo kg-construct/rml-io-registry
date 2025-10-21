@@ -1,6 +1,6 @@
 # CSV Reference formulation
 
-A <dfn>CSV reference formulation</dfn> (`rml:CSVReferenceFormulation`) is a
+A <dfn>CSV reference formulation</dfn> (`rml:CSV`) is a
 <a data-cite="RML-Core#dfn-reference-formulation">reference formulation</a> that
 describes how to access data in a <a data-cite="RML-Core#dfn-data-source">data
 source</a> in [[CSV]] format.
