@@ -10,7 +10,7 @@ The default SQL Reference Formulation is a <a data-cite="RML-Core#dfn-reference-
 ## Iterator
 
 The <a data-cite="RML-Core#dfn-iterator">iterator</a> for a <a data-cite="RML-Core#dfn-logical-source">logical source</a> with the [=SQL reference formulation=] is always row-based over a table.
-The result of evaluating the <a data-cite="RML-Core#dfn-iterator">iterator</a> against the [=SQL value=] that is the <a data-cite="RML-Core#dfn-data-source">data source</a> is a [=SQL row=] of the SQL table.
+The result of evaluating the <a data-cite="RML-Core#dfn-iterator">iterator</a> against the [=SQL value=] that is the <a data-cite="RML-Core#dfn-data-source">data source</a> is a [=SQL row=] of the [=SQL table=].
 
 The [=SQL row=] that is the result of evaluating the <a data-cite="RML-Core#dfn-iterator">iterator</a> MUST be used to generate the <a data-cite="RML-Core#dfn-logical-iteration">logical iterations</a> for the <a data-cite="RML-Core#dfn-logical-source">logical source</a>. Each column in the [=SQL row=] becomes a new [=SQL value=] which MUST be used as the context for the evaluation of the <a data-cite="RML-Core#dfn-expression">expression</a> associated with the <a data-cite="RML-Core#dfn-logical-source">logical source</a>. The order of the [=SQL rows=] of a [=SQL Table=] MUST be preserved in the logical iterations.
 
