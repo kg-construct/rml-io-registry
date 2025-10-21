@@ -1,25 +1,73 @@
 # TEMPLATE Reference formulation
 
-A <dfn>TEMPLATE reference formulation</dfn> (`rml:TEMPLATEReferenceFormulation`) is a <a data-cite="RML-Core#dfn-reference-formulation">reference formulation</a> that describes how to access data in a <a data-cite="RML-Core#dfn-data-source">data source</a> in [[TEMPLATE]] format.
+A <dfn>TEMPLATE reference formulation</dfn> (`rml:TEMPLATE`) is a
+<a data-cite="RML-Core#dfn-reference-formulation">reference formulation</a> that
+describes how to access data in a <a data-cite="RML-Core#dfn-data-source">data
+source</a> in [[TEMPLATE]] format.
 
 ## Reference formulation identifier
 
-The default TEMPLATE Reference Formulation is a <a data-cite="RML-Core#dfn-reference-formulation">reference formulation</a> identified with the IRI `rml:TEMPLATE`. It has no specific properties.
+The default TEMPLATE Reference Formulation is a
+<a data-cite="RML-Core#dfn-reference-formulation">reference formulation</a>
+identified with the IRI `rml:TEMPLATE`. It has no specific properties.
 
 ## Iterator
 
-The <a data-cite="RML-Core#dfn-iterator">iterator</a> for a <a data-cite="RML-Core#dfn-logical-source">logical source</a> with the [=TEMPLATE reference formulation=] SHOULD be expressed using TEMPLATE in accordance with [[RFC9535]].
-The result of evaluating the <a data-cite="RML-Core#dfn-iterator">iterator</a> against the [=TEMPLATE value=] that is the <a data-cite="RML-Core#dfn-data-source">data source</a> is a [=TEMPLATE iterable value=].
+The <a data-cite="RML-Core#dfn-iterator">iterator</a> for
+an <a data-cite="RML-Core#dfn-logical-source">abstract logical source</a> with the 
+[=TEMPLATE reference formulation=] is always row-based over the [=TEMPLATE Table=] represented 
+by the abstract logical source. 
+The result of evaluating the <a data-cite="RML-Core#dfn-iterator">iterator</a>
+against the <a data-cite="RML-Core#dfn-data-source">data source</a> in [[TEMPLATE]]
+format MUST be a sequence of [[=TEMPLATE Iteration=]].
+Consequently, one <a data-cite="RML-Core#dfn-iteration">logical iteration</a>
+for an abstract logical source with [=TEMPLATE reference formulation=] MUST be a [=TEMPLATE Iteration=]. 
+The order of the [=TEMPLATE Iteration=] in the input abstract logical source MUST be preserved in 
+the logical iterations.
 
-The [=TEMPLATE iterable value=] that is the result of evaluating the <a data-cite="RML-Core#dfn-iterator">iterator</a> MUST be used to generate the <a data-cite="RML-Core#dfn-logical-iteration">logical iterations</a> for the <a data-cite="RML-Core#dfn-logical-source">logical source</a>. Each node in the [=nodelist=] becomes a new [=TEMPLATE value=] which MUST be used as the context for the evaluation of the <a data-cite="RML-Core#dfn-expression">expression</a> associated with the <a data-cite="RML-Core#dfn-logical-source">logical source</a>. The order of the [=TEMPLATE iterable value=] MUST be preserved in the logical iterations.
+## Reference Expressions
 
-### Default iterator
+<a data-cite="RML-Core#dfn-reference-expression">Reference expressions</a> inside
+<a data-cite="RML-Core#dfn-expression-map">expression maps</a> associated with 
+an <a data-cite="RML-Core#dfn-abstract-logical-source">abstract logical source</a> 
+using the [=TEMPLATE reference formulation=] SHOULD be expressed as column names of a [=TEMPLATE Iteration=].
 
-The <a data-cite="RML-Core#dfn-default-iterator">default iterator</a>, if no <a data-cite="RML-Core#dfn-iterator">iterator</a> is specified for a <a data-cite="RML-Core#dfn-logical-source">logical source</a> with the [=TEMPLATE reference formulation=], MUST be  [=TEMPLATE default expression=].
+The result of evaluating a <a data-cite="RML-Core#dfn-reference-expression">reference expression</a> 
+against a <a data-cite="RML-Core#dfn-iteration">logical iteration</a> 
+(i.e., a [[=TEMPLATE Iteration=]]) is a [=TEMPLATE Value=]. 
+This result MUST be transformed to a sequence of [=TEMPLATE values=], 
+forming the
+<a data-cite="RML-Core#dfn-expression-evaluation-result">expression evaluation result</a>. 
 
-## Expressions
+<aside class="note">
+Since every [[=TEMPLATE Value=]] consists of a single data value, the expression
+evaluation result will always be a singleton sequence of [[=TEMPLATE value=]]
+</aside>
 
-An <a data-cite="RML-Core#dfn-expression">expression</a> for <a data-cite="RML-Core#dfn-expression-map">expression maps</a> associated with a <a data-cite="RML-Core#dfn-logical-source">logical source</a> with the [=TEMPLATE reference formulation=] SHOULD be expressed using TEMPLATE in accordance with [[TEMPLATE standard]].
+### Invalid Reference Expressions
+An invalid <a data-cite="RML-Core#dfn-reference-expression">reference expression</a> 
+is a <em>non-existent</em> column name of a [[=TEMPLATE Iteration=]]. 
 
-An <a data-cite="RML-Core#dfn-expression">expression</a> is evaluated against a <a data-cite="RML-Core#dfn-logical-iteration">logical iteration</a> which is a [=TEMPLATE value=].
-The result of evaluating the <a data-cite="RML-Core#dfn-expression">expression</a> is a [=TEMPLATE iterable value=], which MUST be transformed to a list of [=TEMPLATE values=] that forms the <a data-cite="RML-Core#dfn-expression-evaluation-result">expression evaluation result</a>. The order of the [=TEMPLATE iterable value=] MUST be preserved in the <a data-cite="RML-Core#dfn-expression-evaluation-result">expression evaluation result</a>.
+Evaluating an invalid <a data-cite="RML-Core#dfn-reference-expression">reference expression</a> 
+MUST generate a <em>NULL</em> value. 
+
+## Generation of null values
+
+Evaluation of a <a data-cite="RML-Core#dfn-reference-expression">reference expression</a>
+<em>R</em> for <a data-cite="RML-Core#dfn-abstract-logical-source">abstract logical sources</a>
+using [[=TEMPLATE reference formulation=]] results in <em>NULL</em> value for 
+the following conditions: 
+
+* <em>R</em> is <a href="#invalid-reference-expressions">invalid</a>. 
+
+
+<aside class="note">
+[[TEMPLATE]] does not have a default NULL token, so no value is considered NULL so
+long as the aforementioned conditions are <em>not violated</em>. 
+For example, given a [[=TEMPLATE Iteration=]] with a column name `firstName` containing an empty 
+string `""` value. 
+Evaluating a valid <a data-cite="RML-Core#dfn-reference-expression">reference expression</a> 
+with the column name `firstName` will generate a [[=TEMPLATE Value=]] that is 
+an <em>empty string</em>: `""`. 
+</aside>
+
