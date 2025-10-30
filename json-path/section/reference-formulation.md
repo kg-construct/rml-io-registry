@@ -1,30 +1,64 @@
 # JSONPath Reference formulation
 
-A <dfn>JSONPath reference formulation</dfn> (`rml:JSONPathReferenceFormulation`) is a <a data-cite="RML-Core#dfn-reference-formulation">reference formulation</a> that describes how to access data in a <a data-cite="RML-Core#dfn-data-source">data source</a> in [[JSON]] format.
+A <dfn>JSONPath reference formulation</dfn> (`rml:JSONPath`) is a
+<a data-cite="RML-Core#dfn-reference-formulation">reference formulation</a> that
+describes how to access data in a <a data-cite="RML-Core#dfn-abstract-logical-source">
+abstract logical source</a> in [[JSON]] format.
 
 ## Reference formulation identifier
 
-The default JSONPath Reference Formulation is a <a data-cite="RML-Core#dfn-reference-formulation">reference formulation</a> identified with the IRI `rml:JSONPath`. It has no specific properties.
+The default JSONPath Reference Formulation is a
+<a data-cite="RML-Core#dfn-reference-formulation">reference formulation</a>
+identified with the IRI `rml:JSONPath`. It has no specific properties.
 
 ## Iterator
 
-The <a data-cite="RML-Core#dfn-iterator">iterator</a> for a <a data-cite="RML-Core#dfn-logical-source">logical source</a> with the [=JSONPath reference formulation=] SHOULD be expressed using JSONPath in accordance with [[RFC9535]].
-The result of evaluating the <a data-cite="RML-Core#dfn-iterator">iterator</a> against the [=JSON value=] that is the <a data-cite="RML-Core#dfn-data-source">data source</a> is a [=nodelist=] (i.e., a list of zero or more [=nodes=] of the [=value=]).
+The <a data-cite="RML-Core#dfn-iterator">iterator</a> for
+an <a data-cite="RML-Core#dfn-logical-source">abstract logical source</a> with the 
+[=JSONPath reference formulation=] is a [[JSONPath]] query.  
+The result of evaluating the <a data-cite="RML-Core#dfn-iterator">iterator</a>
+against the <a data-cite="RML-Core#dfn-data-source">data source</a> in [[JSONPath]]
+format MUST be a [=JSONPath Nodelist=] (i.e., list of zero or more [=JSONPath Nodes=]).
+Consequently, one <a data-cite="RML-Core#dfn-iteration">logical iteration</a>
+for an abstract logical source with [=JSONPath reference formulation=] MUST be a [=JSONPath Node=]
+which will be used as a [=JSONPath Root Node=] for the [reference
+expressions](#reference-expressions). 
+The order of the values in the [=JSONPath Nodelist=] in the input abstract logical
+source MUST be preserved in the logical iterations.
 
-The [=nodelist=] that is the result of evaluating the <a data-cite="RML-Core#dfn-iterator">iterator</a> MUST be used to generate the <a data-cite="RML-Core#dfn-logical-iteration">logical iterations</a> for the <a data-cite="RML-Core#dfn-logical-source">logical source</a>. Each node in the [=nodelist=] becomes a new [=JSON value=] which MUST be used as the context for the evaluation of the <a data-cite="RML-Core#dfn-expression">expression</a> associated with the <a data-cite="RML-Core#dfn-logical-source">logical source</a>. The order of the [=nodelist=] MUST be preserved in the logical iterations.
 
-### Default iterator
+## Reference Expressions
 
-The <a data-cite="RML-Core#dfn-default-iterator">default iterator</a>, if no <a data-cite="RML-Core#dfn-iterator">iterator</a> is specified for a <a data-cite="RML-Core#dfn-logical-source">logical source</a> with the [=JSONPath reference formulation=], MUST be the [=root node identifier=] `$`. This expression refers to the root node of the [=JSON value=].
+<a data-cite="RML-Core#dfn-reference-expression">Reference expressions</a> inside
+<a data-cite="RML-Core#dfn-expression-map">expression maps</a> associated with 
+an <a data-cite="RML-Core#dfn-abstract-logical-source">abstract logical source</a> 
+using the [=JSONPath reference formulation=] SHOULD be expressed as
+[[JSONPath]] queries.
 
-## Expressions
+The result of evaluating a [[JSONPath]] <a data-cite="RML-Core#dfn-reference-expression">reference expression</a> 
+against a single <a data-cite="RML-Core#dfn-iteration">logical iteration</a> 
+(i.e., a [[=JSONPath Root Node=]]) MUST be a sequence of [=JSON values=] which 
+forms the 
+<a data-cite="RML-Core#dfn-expression-evaluation-result">expression evaluation result</a>. 
 
-An <a data-cite="RML-Core#dfn-expression">expression</a> for <a data-cite="RML-Core#dfn-expression-map">expression maps</a> associated with a <a data-cite="RML-Core#dfn-logical-source">logical source</a> with the [=JSONPath reference formulation=] SHOULD be expressed using JSONPath in accordance with [[RFC9535]].
 
-An <a data-cite="RML-Core#dfn-expression">expression</a> is evaluated against a <a data-cite="RML-Core#dfn-logical-iteration">logical iteration</a> which is a [=JSON value=].
-The result of evaluating the <a data-cite="RML-Core#dfn-expression">expression</a> is a [=nodelist=], which MUST be transformed to a list of [=JSON values=] that forms the <a data-cite="RML-Core#dfn-expression-evaluation-result">expression evaluation result</a>. The order of the [=nodelist=] MUST be preserved in the <a data-cite="RML-Core#dfn-expression-evaluation-result">expression evaluation result</a>.
+### Invalid Reference Expressions
+An invalid [[JSONPath]] <a data-cite="RML-Core#dfn-reference-expression">reference expression</a> 
+is a [[JSONPath]] query that does not conform to the official specification of [[JSONPath]]. 
+An invalid [[JSONPath]] query MUST be treated as an error and a conforming <a data-cite="RML-Core#dfn-rml-processor">RML processor</a>
+MUST report the error to the agent invoking the <a data-cite="RML-Core#dfn-rml-processor">RML processor</a>. 
 
-### Handling absence of values in JSON data  
+## Generation of null values
 
-The result of evaluating an <a data-cite="RML-Core#dfn-expression">expression</a> with a
-non-existent JSONPath in the input JSON data is a NULL value.
+Evaluation of a valid [[JSONPath]] <a data-cite="RML-Core#dfn-reference-expression">reference expression</a>
+<em>R</em> for <a data-cite="RML-Core#dfn-abstract-logical-source">abstract logical sources</a>
+using [[=JSONPath reference formulation=]] results in <em>NULL</em> value for 
+the following conditions: 
+
+* JSONPath <em>R</em> refers to an actual [[JSON]] <em>null</em> value 
+  (i.e., Evaluating <em>R</em> = "$.a" on a [[JSON]] value {"a": null}). 
+* JSONPath <em>R</em> contains [=JSONPath segments=] which refers to non-existent children 
+  of the input [=JSON value=]. 
+* JSONPath <em>R</em> contains [=JSONPath selectors=] which refers to non-existent 
+  [=JSON name=] of the input [=JSON value=].
+
