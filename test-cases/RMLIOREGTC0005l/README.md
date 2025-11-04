@@ -49,7 +49,7 @@ INSERT INTO student values ('10', 'Venus');
 
 **Output**
 ```
-<http://example.com/10/Venus> <http://example.com/id> "10";
+<http://example.com/10/Venus> <http://example.com/id> "10".
 
 ```
 
