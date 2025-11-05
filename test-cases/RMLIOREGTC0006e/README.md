@@ -8,8 +8,8 @@
 
 **Input**
 ```
-USE test;
-DROP TABLE IF EXISTS test.Person;
+USE TestDB;
+DROP TABLE IF EXISTS TestDB.Person;
 
 CREATE TABLE Person (
 ID integer,
