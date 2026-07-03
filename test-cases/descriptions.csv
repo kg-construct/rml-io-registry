@@ -115,7 +115,7 @@ RMLTC0002b-RDB,"Two columns mapping, generation of a BlankNode subject by using 
 RMLTC0002c-RDB,"Two columns mapping, an undefined SQL identifier / logical reference",Tests the presence of an undefined SQL identifier / logical reference,yes,,,,,,
 RMLTC0002d-RDB,"Two columns mapping, generation of a BlankNode subject by using a SQL Query that concatenates two columns","Tests (1) two column mapping, no primary key; (2) generation of a BlankNode subject by using a SQL Query that concatenates two columns; (3) one column to one property",no,,,,,,
 RMLTC0002e-RDB,"Two columns mapping, an undefined rr:tableName",Tests the presence of an undefined rr:tableName,yes,,,,,,
-RMLTC0002f-RDB,"Two columns mapping, delimited identifiers referenced as regular identifiers","Tests the presence of delimited identifiers referenced as regular identifiers. Within rr:template ID is ok, but Name is not",yes,,,,,,
+RMLTC0002f-RDB,"Two columns mapping, delimited identifiers referenced as regular identifiers",Tests the presence of delimited identifiers referenced as regular identifiers,yes,,,,,,
 RMLTC0002g-RDB,"Two columns mapping, invalid SQL query",Tests the presence of an invalid SQL query,yes,,,,,,
 RMLTC0002h-RDB,"Two columns mapping, duplicate column name in SELECT",Tests the presence of duplicate column names in the SELECT list of the SQL query,yes,,,,,,
 RMLTC0002i-RDB,"Two columns mapping, SQL Version identifier",Tests the presence of a SQL Version identifier ,no,,,,,,

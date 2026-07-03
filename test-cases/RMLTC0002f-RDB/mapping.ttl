@@ -22,7 +22,7 @@
     ];
   rml:subjectMap [
       rml:class foaf:Person;
-      rml:template "http://example.com/{\"ID\"}/{\"Name\"}"
+      rml:template "http://example.com/{ID}/{Name}"
     ] .
 
 <http://example.com/base/#DB_source> a d2rq:Database;
