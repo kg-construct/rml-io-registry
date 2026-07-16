@@ -1,10 +1,19 @@
-<http://example.org/0> <http://xmlns.com/foaf/0.1/age> "33" .
-<http://example.org/0> <http://xmlns.com/foaf/0.1/name> "Monica Geller" .
-<http://example.org/1> <http://xmlns.com/foaf/0.1/age> "34" .
-<http://example.org/1> <http://xmlns.com/foaf/0.1/name> "Rachel Green" .
-<http://example.org/2> <http://xmlns.com/foaf/0.1/age> "35" .
-<http://example.org/2> <http://xmlns.com/foaf/0.1/name> "Joey Tribbiani" .
-<http://example.org/3> <http://xmlns.com/foaf/0.1/age> "36" .
-<http://example.org/3> <http://xmlns.com/foaf/0.1/name> "Chandler Bing" .
-<http://example.org/4> <http://xmlns.com/foaf/0.1/age> "37" .
-<http://example.org/4> <http://xmlns.com/foaf/0.1/name> "Ross Geller" .
+<http://example.com/0/Monica%20Geller> <http://example.com/id> "0" .
+<http://example.com/0/Monica%20Geller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://example.com/0/Monica%20Geller> <http://xmlns.com/foaf/0.1/name> "Monica Geller" .
+
+<http://example.com/1/Rachel%20Green> <http://example.com/id> "1" .
+<http://example.com/1/Rachel%20Green> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://example.com/1/Rachel%20Green> <http://xmlns.com/foaf/0.1/name> "Rachel Green" .
+
+<http://example.com/2/Joey%20Tribbiani> <http://example.com/id> "2" .
+<http://example.com/2/Joey%20Tribbiani> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://example.com/2/Joey%20Tribbiani> <http://xmlns.com/foaf/0.1/name> "Joey Tribbiani" .
+
+<http://example.com/3/Chandler%20Bing> <http://example.com/id> "3" .
+<http://example.com/3/Chandler%20Bing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://example.com/3/Chandler%20Bing> <http://xmlns.com/foaf/0.1/name> "Chandler Bing" .
+
+<http://example.com/4/Ross%20Geller> <http://example.com/id> "4" .
+<http://example.com/4/Ross%20Geller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://example.com/4/Ross%20Geller> <http://xmlns.com/foaf/0.1/name> "Ross Geller" .
