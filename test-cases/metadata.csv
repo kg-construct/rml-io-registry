@@ -18,7 +18,7 @@ RMLIOREGTC0004b,Missing MySQL column,Handle missing MySQL column in rml:referenc
 RMLIOREGTC0006d,SQLServer table invalid,Handle invalid table for SQLServer,json,mapping.ttl,application/sql,,,,,,resource.sql,,,,,,true
 RMLIOREGTC0011a,Access a SPARQL triplestore,Access a SPARQL triple story using a SPARQL query,json,mapping.ttl,,,,application/n-quads,,,,,,output.nq,,,false
 RMLIOREGTC0004v,MySQL: Table with datatypes: string and integer,Tests the rml:termType and datatype conversions: string and integer,json,mapping.ttl,application/sql,,,application/n-quads,,,resource.sql,,,output.nq,,,false
-RMLIOREGTC0006c,SQLServer NULL,Handle SQLServer NULL value,json,mapping.ttl,application/sql,,,application/n-quads,,,resource.sql,,,output.nq,,,false
+RMLIOREGTC0006c,SQLServer NULL,Handle SQLServer NULL value,json,mapping.ttl,application/sql,,,application/n-quads,,,resource.sql,,,output.nq,,,true
 RMLIOREGTC0005j,"PostgreSQL: Two columns mapping, duplicate column name in SELECT",Tests the presence of duplicate column names in the SELECT list of the SQL query,json,mapping.ttl,application/sql,,,,,,resource.sql,,,,,,true
 RMLIOREGTC0005z,"PostgreSQL: Table with datatypes, binary column",Tests the rml:termType and datatype conversions: binary,json,mapping.ttl,application/sql,,,application/n-quads,,,resource.sql,,,output.nq,,,false
 RMLIOREGTC0012d,CSVW trim,Apply trimming on CSV values,json,mapping.ttl,text.csv,,,application/n-quads,,,student.csv,,,output.nq,,,false
