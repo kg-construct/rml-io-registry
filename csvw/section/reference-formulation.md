@@ -6,6 +6,7 @@ A <dfn>CSVW reference formulation</dfn> (`rml:CSVWReferenceFormulation`) is a <a
 
 The default CSVW Reference Formulation is a <a data-cite="RML-Core#dfn-reference-formulation">reference formulation</a> identified with the IRI `rml:CSVW`. It has no specific properties.
 
+
 ## Iterator
 
 The <a data-cite="RML-Core#dfn-iterator">iterator</a> for a <a data-cite="RML-Core#dfn-logical-source">logical source</a> with the [=CSVW reference formulation=] is always row-based over a table.
@@ -15,20 +16,81 @@ The [=CSV row=] that is the result of evaluating the <a data-cite="RML-Core#dfn-
 
 ## Expressions
 
-An <a data-cite="RML-Core#dfn-expression">expression</a> for <a data-cite="RML-Core#dfn-expression-map">expression maps</a> associated with a <a data-cite="RML-Core#dfn-logical-source">logical source</a> with the [=CSV reference formulation=] SHOULD be expressed as [=CSV column=] names of a [=CSV row=].
+An <a data-cite="RML-Core#dfn-expression">expression</a> for <a data-cite="RML-Core#dfn-expression-map">expression maps</a> associated with a <a data-cite="RML-Core#dfn-logical-source">logical source</a> with the CSV reference formulation SHOULD be expressed as [=CSV column=] names of a [=CSV row=].
 
 An <a data-cite="RML-Core#dfn-expression">expression</a> is evaluated against a <a data-cite="RML-Core#dfn-logical-iteration">logical iteration</a> which is a [=CSV value=].
 The result of evaluating the <a data-cite="RML-Core#dfn-expression">expression</a> is a [=CSV row=], which MUST be transformed to a list of [=CSV values=] that forms the <a data-cite="RML-Core#dfn-expression-evaluation-result">expression evaluation result</a>. The order of the [=CSV row=] MUST be preserved in the <a data-cite="RML-Core#dfn-expression-evaluation-result">expression evaluation result</a>.
 
-## CSV derivates
 
-CSVW allows to specify how a CSV should be parsed and read in terms of NULL values, separator, encoding, etc.
-These CSVW properties must be used by the engine to correctly read the CSV file.
+## CSVW metadata
+CSVW provides metadata which helps in parsing the CSV in terms of NULL values, separator, encoding, etc.
+These CSVW metadata  must be used by the engine to correctly parse the CSV file.
+[[CSVW-Namespace]] vocabulary is used by this spec to define the metadata that
+helps with parsing the CSV file.
 
-```
-<CSVWTable> a csvw:Table;
-  csvw:separator ";";
-  csvw:null "";
-  csvw:encoding "utf-16";
-.
-```
+
+### No headers
+CSVW enables parsing CSV files without a header row.  
+Parsing CSV files with `1..N` columns with `csv:header` set to `false` will 
+produce a table with the column names "1" to "N" respectively.
+
+
+Provided with the following input CSV file with 4 columns: 
+<pre class="ex-input">
+647,434244.172304,428652.920455
+646,434546.276382,428380.451633
+6212,434644.819095,428412.411432
+651,434758.675879,428527.599874
+650,434821.652431,428439.025039
+...
+</pre>
+
+and the following RML mapping containing the CSVW reference formulation definitions for 
+the aforementioned CSV file:
+<pre class="ex-mapping">
+&lt;CSVWTable&gt; a csvw:Table;
+    csvw:null "";
+    csvw:separator ";"; 
+    csvw:dialect [
+        csvw:header "false"^^xsd:boolean;
+    ];
+</pre>
+
+
+It is the same as working with the following CSV table where the headers are 
+named <b>"1", "2", "3", and "4"</b>: 
+<pre class="ex-input">
+1,2,3,4 #numbered header row
+647,434244.172304,428652.920455
+646,434546.276382,428380.451633
+6212,434644.819095,428412.411432
+651,434758.675879,428527.599874
+650,434821.652431,428439.025039
+...
+</pre>
+
+
+
+### Default properties
+While the default reference formulation identifier (`rml:CSVW`) specifies the
+use of the CSVW reference formulation, it does not by itself describe how to
+parse a given CSV file.
+
+Thus, a default set of CSVW properties and corresponding values is defined 
+to ensure consistent behaviour across implementations. 
+These defaults provide a minimal, functional CSVW configuration suitable for
+parsing standard CSV files in the absence of explicit definition of
+CSVW properties.
+
+
+See https://www.w3.org/TR/2015/REC-tabular-metadata-20151217/#dialect-descriptions
+for the actual default values for CSVW dialect metadata.
+
+<pre class="ex-mapping"> 
+&lt;CSVWTable&gt; a csvw:Table;
+    csvw:null "";
+    csvw:separator ";"; 
+    csvw:dialect [
+        # Default CSVW dialect options 
+    ];
+</pre>
