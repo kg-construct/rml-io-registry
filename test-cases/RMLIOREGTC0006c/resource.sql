@@ -1,8 +1,12 @@
 USE TestDB;
-EXEC sp_msforeachtable 'ALTER TABLE ? NOCHECK CONSTRAINT all'
-EXEC sp_msforeachtable 'DROP TABLE ?'
+DROP TABLE IF EXISTS Person;
 
-CREATE TABLE student (
-  "Name" VARCHAR(50)
+CREATE TABLE Person (
+ID integer,
+Name varchar(50),
+DateOfBirth varchar(50),
+PRIMARY KEY (ID)
 );
-INSERT INTO student values ('Venus');
+INSERT INTO Person (ID, Name, DateOfBirth) VALUES (1,'Alice', NULL);
+INSERT INTO Person (ID, Name, DateOfBirth) VALUES (2,'Bob', 'September, 2010');
+
