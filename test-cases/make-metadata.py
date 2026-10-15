@@ -8,7 +8,7 @@ import csv
 
 INPUT_PATTERN_MIME_PAIRS = [
     ("*.tsv", "text/tab-separated-values"),
-    ("*.csv", "text.csv"),
+    ("*.csv", "text/csv"),
     ("*.json", "application/json"),
     ("*.xml", "application/xml"),
     ("*.sql", "application/sql"),
