@@ -49,9 +49,9 @@ INSERT INTO Student (ID, Name) VALUES(10,'Venus');
 
 <http://example.com/base/#DB_source> a d2rq:Database;
   d2rq:jdbcDSN "CONNECTIONDSN";
-  d2rq:jdbcDriver "com.mysql.cj.jdbc.Driver";
-  d2rq:password "";
-  d2rq:username "root" .
+  d2rq:jdbcDriver "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+  d2rq:password "YourSTRONG!Passw0rd;";
+  d2rq:username "sa" .
 
 ```
 
