@@ -1,11 +1,11 @@
 # SQL Reference formulation
 
-A <dfn>SQL reference formulation</dfn> (`rml:SQLQuery` or `rml:SQLTable`) is a <a data-cite="RML-Core#dfn-reference-formulation">reference formulation</a> that describes how to access data in a <a data-cite="RML-Core#dfn-data-source">data source</a> in [[SQL]] format.
+A <dfn>SQL reference formulation</dfn> (`rml:SQL2008Query` or `rml:SQL2008Table`) is a <a data-cite="RML-Core#dfn-reference-formulation">reference formulation</a> that describes how to access data in a <a data-cite="RML-Core#dfn-data-source">data source</a> in [[SQL]] format.
 
 ## Reference formulation identifier
 
-The default SQL Reference Formulation is a <a data-cite="RML-Core#dfn-reference-formulation">reference formulation</a> identified with the IRI `rml:SQLQuery`. It has no specific properties.
-`rml:SQLTable` also exists which is a shortcut for `SELECT * FROM $table`. Processors convert this shortcut automatically to this SQL query with reference formulation `rml:SQLQuery`.
+The default SQL Reference Formulation is a <a data-cite="RML-Core#dfn-reference-formulation">reference formulation</a> identified with the IRI `rml:SQL2008Query`. It has no specific properties.
+`rml:SQL2008Table` also exists which is a shortcut for `SELECT * FROM $table`. Processors convert this shortcut automatically to this SQL query with reference formulation `rml:SQL2008Query`.
 
 ## Iterator
 
